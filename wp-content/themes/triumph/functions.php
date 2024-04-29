@@ -7,6 +7,8 @@
  * @subpackage triumph
  */
 
+use Carbon_Fields\Carbon_Fields;
+
 const THEME_NAME = 'triumph';
 define( 'THEME_URI', get_template_directory_uri() );
 define( 'THEME_DIR', get_template_directory() );
@@ -24,7 +26,11 @@ function critick_load_theme_dependencies(): void
 		'footer_menu'	=> 'Меню футера'
 	] );
 
+	require_once( 'vendor/autoload.php' );
+	Carbon_Fields::boot();
+
 	// Please place all custom functions declarations in this file.
+	require_once( 'theme-functions/theme-settings.php' );
 	require_once( 'theme-functions/theme-filters.php' );
 	require_once( 'theme-functions/theme-functions.php' );
 }

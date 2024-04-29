@@ -9,6 +9,7 @@
 
 global $page, $paged;
 $site_description = get_bloginfo( 'description', 'display' );
+$logo             = carbon_get_theme_option( 'logo' );
 ?>
 
 <!doctype html>
