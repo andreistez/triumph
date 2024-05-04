@@ -2,11 +2,20 @@ a {
 	display: inline-block;
 	text-decoration: none;
 	transition: color ease-out $tr;
-	cursor: pointer
+	cursor: pointer;
+	transition: opacity ease $tr;
+
+	&:hover {
+		opacity: $op;
+	}
 }
 
-p:not(:last-child) {
-	margin: 0 0 20px
+p {
+	font-family: $ff;
+	font-size: 20px;
+	font-weight: $fw-regular;
+	line-height: 28px;
+	text-align: left;
 }
 
 b, strong {

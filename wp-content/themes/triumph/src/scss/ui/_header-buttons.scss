@@ -1,0 +1,79 @@
+.burger-button {
+	position: relative;
+	width: 28px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+	transition: opacity ease $tr;
+
+	span {
+		width: 100%;
+		height: 2px;
+		background-color: $c-red;
+	}
+
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		height: 2px;
+		background-color: $c-red;
+	}
+
+	&::before {
+		width: 50%;
+		top: calc(100% - 2px);
+	}
+
+	&::after {
+		width: 80%;
+		bottom: calc(100% - 2px);
+	}
+
+	&:hover {
+		opacity: $op;
+	}
+}
+
+.show-maps {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 12px;
+	height: 12px;
+	margin-right: 8px;
+	background-color: $c-red;
+	border-radius: 100%;
+	transition: opacity ease $tr;
+
+	span {
+		width: 6px;
+		height: 6px;
+		border-radius: 100%;
+		position: relative;
+
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&::before, &::after {
+			width: 100%;
+			height: 2px;
+			background-color: $c-white;
+		}
+
+		&::after {
+			transform: translate(-50%,-50%) rotate(90deg);
+		}
+	}
+
+	&:hover {
+		opacity: $op;
+	}
+}

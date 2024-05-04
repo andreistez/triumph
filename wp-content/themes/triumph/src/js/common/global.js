@@ -54,3 +54,25 @@ export const scrollToElem = ( elementSelector, ignoreHeaderHeight = false, scrol
 		behavior: 'smooth'
 	} )
 }
+
+export const close = (selector) => {
+	const wrapper = document.querySelector(selector)
+	const button  = wrapper.querySelector('.close')
+
+	if(!wrapper && ! button) return
+
+	button.addEventListener('click', () => {
+		if(wrapper.classList.contains('opened')) wrapper.classList.remove('opened')
+	})
+}
+
+export const outerClose = (selector) => {
+    const wrapper = document.querySelector(selector)
+
+    if (!wrapper) return
+
+    document.addEventListener('click', e => {
+        const outside = !e.target.closest(selector)
+        outside ? wrapper.classList.remove('opened') : null
+    })
+}

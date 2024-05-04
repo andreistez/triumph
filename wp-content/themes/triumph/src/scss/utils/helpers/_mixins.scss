@@ -1,0 +1,21 @@
+@mixin textSm() {
+	font-size: 14px;
+	font-weight: $fw-regular;
+	line-height: 20px;
+}
+
+@mixin textLgBold() {
+	font-size: 20px;
+	font-weight: $fw-extra;
+	line-height: 28px;
+}
+
+@mixin menuLink() {
+	font-family: $ff-title;
+	font-size: 24px;
+	font-weight: $fw-regular;
+	line-height: 28px;
+	letter-spacing: 0.02em;
+	color: $c-black;
+	text-align: left;
+}

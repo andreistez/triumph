@@ -1,12 +1,46 @@
 h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h2, .h2 {
 	font-family: $ff-title;
-	font-weight: $fw-bold;
+	font-weight: $fw-regular;
 	line-height: $lh-title;
 	word-wrap: break-word;
-	margin: 0
+	margin: 0;
+
+	span {
+		color: $c-red;
+	}
+}
+
+h1, .h1 {
+	font-size: 48px;
+	line-height: 56px;
+	margin-bottom: 28px;
+
+	@media (min-width: $md) {
+		font-size: 72px;
+		line-height: 72px;
+	}
+}
+
+h2, .h2 {
+	font-size: 48px;
+	line-height: 56px;
+	margin-bottom: 20px;
+
+	@media (min-width: $md) {
+		font-size: 72px;
+		line-height: 80px;
+		margin-bottom: 28px;
+	}
+
+	@media (min-width: $lg) {
+		margin-bottom: 40px;
+	}
+}
+
+h4, .h4 {
+	font-family: $ff;
+	font-weight: $fw-bold;
+	font-size: 28px;
+	line-height: 28px;
 }
