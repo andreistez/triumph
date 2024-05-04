@@ -31,6 +31,7 @@ function critick_load_theme_dependencies(): void
 
 	// Please place all custom functions declarations in this file.
 	require_once( 'theme-functions/theme-settings.php' );
+	require_once( 'theme-functions/sections.php' );
 	require_once( 'theme-functions/theme-filters.php' );
 	require_once( 'theme-functions/theme-functions.php' );
 }

@@ -68,10 +68,29 @@ const scssPages = () => {
 		.pipe( browserSync.stream() )
 }
 
+const scssSections = () => {
+	return gulp.src( path.scssSections.src, { sourcemaps: app.isDev } )
+		.pipe( plumber( {
+			errorHandler: notify.onError( error => ( {
+				title	: 'ERROR IN SCSS PAGES',
+				message	: error.message
+			} ) )
+		} ) )
+		.pipe( sass() )
+		.pipe( webpCss() )
+		.pipe( autoprefixer() )
+		.pipe( gulpIf( app.isProd, groupCssMediaQueries() ) )
+		.pipe( rename( { suffix: '.min' } ) )
+		.pipe( gulpIf( app.isProd, csso() ) )
+		.pipe( gulp.dest( path.scssSections.dest, { sourcemaps: app.isDev } ) )
+		.pipe( browserSync.stream() )
+}
+
 const watcher = () => {
 	gulp.watch( path.php.src ).on( 'all', browserSync.reload )
 	gulp.watch( path.scss.watch, scss )
 	gulp.watch( path.scssPages.watch, scssPages )
+	gulp.watch( path.scssSections.watch, scssSections )
 	gulp.watch( path.js.watch, js ).on( 'all', browserSync.reload )
 	gulp.watch( path.img.watch, img ).on( 'all', browserSync.reload )
 	gulp.watch( path.fonts.watch, fonts ).on( 'all', browserSync.reload )
@@ -79,7 +98,7 @@ const watcher = () => {
 
 const build = gulp.series(
 	clear,
-	gulp.parallel( fonts, scss, scssPages, js, img )
+	gulp.parallel( fonts, scss, scssPages, scssSections, js, img )
 )
 
 const dev = gulp.series(

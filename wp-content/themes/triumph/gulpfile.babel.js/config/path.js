@@ -26,9 +26,15 @@ export default {
 		dest: pathDest + '/css/pages'
 	},
 
+	scssSections: {
+		src: './sections/**/*.scss',
+		watch: './sections/**/*.scss',
+		dest: pathDest + '/css/sections'
+	},
+
 	js: {
-		src: [pathSrc + '/js/main.js', pathSrc + '/js/pages/**/*.js'],
-		watch: pathSrc + '/js/**/*.js',
+		src: [pathSrc + '/js/main.js', pathSrc + '/js/pages/**/*.js', './sections/**/*.js'],
+		watch: [pathSrc + '/js/**/*.js', './sections/**/*.js'],
 		dest: pathDest + '/js'
 	},
 
