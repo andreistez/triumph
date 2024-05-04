@@ -1,0 +1,76 @@
+.button {
+	position: relative;
+	width: 100%;
+	font-family: $ff;
+	font-size: 16px;
+	font-weight: $fw-extra;
+	line-height: 19.17px;
+	padding: 20.5px 36px;
+	background-color: $b-red;
+	color: $c-red;
+	border-radius: $border40;
+	transition: background-color ease $tr,
+				color ease $tr;
+
+	@media (min-width: $md) {
+		width: auto;
+	}
+
+	&:hover {
+		background-color: $b-light;
+	}
+
+	&:active {
+		background-color: #e4372770;
+	}
+
+	&.sm {
+		padding: 12.5px 24px;
+	}
+
+	&.bg-red {
+		background-color: $c-red;
+		color: $c-white;
+
+		&:hover {
+			background-color: $b-dark;
+		}
+
+		&:active {
+			background-color: #72170d;
+		}
+	}
+
+	&.after {
+		&::after {
+			content: 'Это бесплатно!';
+			font-family: $ff;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 0 8px;
+			font-family: $ff;
+			font-size: inherit;
+			font-weight: $fw-medium;
+			line-height: inherit;
+			text-align: center;
+			color: $c-red;
+			background-color: $b-light;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+
+		&-red {
+			background-color: $c-red;
+			color: $c-white;
+		}
+	}
+}
+
+.button-wrapper {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
