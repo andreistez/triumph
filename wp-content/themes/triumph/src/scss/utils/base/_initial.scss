@@ -17,7 +17,7 @@ body {
 	height: auto;
 	font-family: $ff;
 	font-size: $fs-md;
-	line-height: $lh;
+	line-height: $lh-28;
 	color: $c-black;
 	background-color: $c-white
 }
@@ -32,6 +32,12 @@ form, fieldset {
 	margin: 0;
 	padding: 0;
 	border: 0
+}
+
+button {
+	border: 0;
+	outline: 0;
+	cursor: pointer;
 }
 
 ul {

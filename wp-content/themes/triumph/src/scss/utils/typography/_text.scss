@@ -5,6 +5,14 @@ a {
 	cursor: pointer
 }
 
+p {
+	font-family: $ff;
+	font-size: 20px;
+	font-weight: $fw-regular;
+	line-height: 28px;
+	text-align: left;
+}
+
 p:not(:last-child) {
 	margin: 0 0 20px
 }
