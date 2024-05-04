@@ -177,7 +177,6 @@ $logo             = carbon_get_theme_option( 'logo' );
 							Получить консультацию
 						</button>
 					</div>
-					
 				</div>
 			</div>
 		</div>

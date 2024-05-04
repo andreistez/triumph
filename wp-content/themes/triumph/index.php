@@ -3,16 +3,11 @@
 /**
  * Index page default template.
  *
- * @package    WordPress
+ * @package WordPress
  * @subpackage triumph
  */
 
 get_header();
-
-wp_enqueue_style( 'fc-hero', THEME_URI . '/static/css/sections/hero/hero.min.css', [], THEME_VERSION );
-wp_enqueue_script( 'fc-hero', THEME_URI . '/static/js/hero/hero.min.js', [ 'jquery' ], THEME_VERSION, true );
-
-$sections = carbon_get_the_post_meta( 'page_sections' );
 ?>
 
 <main class="main">
@@ -35,7 +30,7 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 	}
 
 	if( get_next_posts_link() ) next_posts_link( '' );
-	?>
+	?> -->
 </main>
 
 <?php
