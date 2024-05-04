@@ -1,1 +1,197 @@
-// Header common styles.
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 22px 0;
+	background-color: $c-white;
+	z-index: 99;
+
+	&-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&.opened {
+			.burger-menu {
+				display: block;
+			}
+		}
+	}
+
+	&-left {
+		display: flex;
+		align-items: center;
+	}
+
+	&-logo {
+		transition: opacity ease $tr;
+
+		img {
+			width: auto;
+			max-height: 40px;
+		}
+	}
+
+	.addresses {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2px;
+
+		p {
+			@include textSm();
+		}
+
+		&-more {
+			display: flex;
+			align-items: center;
+			background-color: $b-light;
+			padding: 0 9px;
+			border-radius: $border24;
+			position: relative;
+
+			p {
+				color: $c-red;
+			}
+		}
+
+		.hidden-addresses {
+			display: none;
+			flex-direction: column;
+			gap: 16px;
+			width: 100vw;
+			position: absolute;
+			left: 0;
+			top: 20px;
+			padding: 20px;
+			background-color: $c-white;
+			
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 24px;
+				top: -12px;
+			}
+
+			&-item {
+				position: relative;
+				padding-left: 20px;
+
+				address, a {
+					@include textSm();
+				}
+
+				a {
+					color: $c-red;
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 15%;
+					display: block;
+					width: 6px;
+					height: 6px;
+					border-top: 2px solid $c-red;
+					border-right: 2px solid $c-red;
+					transform: rotate(45deg)
+				}
+			}
+
+			@media(min-width: $xl) {
+				width: 310px;
+				left: -18px;
+				top: 35px;
+				border-radius: 15px;
+				box-shadow: 2px -5px 20px -3px #00000033;
+
+				&::before {
+					content: '';
+					position: absolute;
+					left: 24px;
+					top: -10px;
+					width: 20px;
+					height: 20px;
+					transform: rotate(45deg);
+					background-color: $c-white;
+				}
+			}
+		}
+
+		&.clicked {
+			.hidden-addresses {
+				display: flex;
+				z-index: 100;
+			}
+
+			.show-maps {
+				span {
+					&::after {
+						display: none
+					}
+				}
+			}
+		}
+	}
+
+	&-worktime {
+		p {
+			@include textSm();	
+		}
+	}
+
+	&-links {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+		a {
+			@include textLgBold();
+			color: $c-black;
+		}
+
+		.phone {
+			display: none;
+
+			@media (min-width: $md) {
+				display: block;
+			}
+
+			&.mobile {
+				display: block;
+
+				@media (min-width: $md) {
+					display: none;
+				}
+			}
+		}
+
+		&.mobile {
+			margin-bottom: 20px;
+			
+			@media (min-width: $md) {
+				display: none;
+			}
+		}
+	}
+
+	.addresses, .header-worktime, .button.sm {
+		&.desktop {
+			display: none;
+		
+			@media (min-width: $xl) {
+				display: flex;
+			}
+		}
+		
+		&.mobile {
+			display: flex;
+		
+			@media (min-width: $xl) {
+				display: none;
+			}
+		}
+	}
+}

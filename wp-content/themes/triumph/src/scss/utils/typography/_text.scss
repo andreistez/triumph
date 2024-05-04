@@ -2,7 +2,12 @@ a {
 	display: inline-block;
 	text-decoration: none;
 	transition: color ease-out $tr;
-	cursor: pointer
+	cursor: pointer;
+	transition: opacity ease $tr;
+
+	&:hover {
+		opacity: $op;
+	}
 }
 
 p {
@@ -11,10 +16,6 @@ p {
 	font-weight: $fw-regular;
 	line-height: 28px;
 	text-align: left;
-}
-
-p:not(:last-child) {
-	margin: 0 0 20px
 }
 
 b, strong {
