@@ -1,0 +1,51 @@
+.yt-lazy {
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: $border28;
+
+	iframe {
+		width: 100%;
+		height: 100%;
+		border-radius: $border28;
+	}
+
+	.play-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 88px;
+		height: 88px;
+		border-radius: 100%;
+		background-color: $b-light;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -44px;
+		margin-left: -44px;
+		backdrop-filter: blur(3px);
+		z-index: 1;
+		border: 1px solid $c-red;
+		transition: background-color ease $tr;
+
+		svg path {
+			transition: fill ease $tr;
+		}
+	}
+
+	&:hover {
+		.play-button {
+			svg path {
+				fill: $c-white;
+			}
+
+			background-color: $c-red;
+		}
+	}
+
+	&-poster {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

@@ -11,6 +11,7 @@ get_header();
 
 wp_enqueue_style( 'fc-hero', THEME_URI . '/static/css/sections/hero/hero.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-about', THEME_URI . '/static/css/sections/about/about.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'fc-gallery', THEME_URI . '/static/css/sections/gallery/gallery.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'fc-hero', THEME_URI . '/static/js/hero/hero.min.js', [ 'jquery' ], THEME_VERSION, true );
 
 $sections = carbon_get_the_post_meta( 'page_sections' );
@@ -122,6 +123,99 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 							</div>
 							<div class="about-item-img">
 								<img src="<?php echo THEME_URI ?>/static/img/about4.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="gallery">
+			<div class="container">
+				<div class="gallery-wrapper">
+					<div class="gallery-info">
+						<h2><span>Галерея</span> событий</h2>
+						<div class="gallery-video">
+							<div class="yt-lazy">
+								<div id="player" class="yt-lazy-placeholder" data-video="0xhzwDXfLds">
+									<img class="yt-lazy-poster" src="<?php echo THEME_URI ?>/static/img/gallery-cover.jpg" alt="">								
+									<button class="play-button">
+										<svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.7428 15.0857L6.45707 22.8C3.9143 24.7071 0.285644 22.8928 0.285644 19.7143L0.285644 4.28573C0.285643 1.10727 3.9143 -0.707062 6.45707 1.20001L16.7428 8.9143C18.7999 10.4572 18.7999 13.5429 16.7428 15.0857Z" fill="#E53724"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="gallery-video-desc">
+								<p>Здесь описание к видео</p>
+							</div>
+						</div>
+					</div>
+					<div class="gallery-photo">
+						<div class="swiper swiper-gallery">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="gallery-photo">
+										<img src="<?php echo THEME_URI ?>/static/img/g1.jpg" alt="">
+									</div>
+									<div class="gallery-photo-desc">
+										<p>Здесь описание к фотографии</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="gallery-photo">
+										<img src="<?php echo THEME_URI ?>/static/img/g1.jpg" alt="">
+									</div>
+									<div class="gallery-photo-desc">
+										<p>Здесь описание к фотографии</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="gallery-photo">
+										<img src="<?php echo THEME_URI ?>/static/img/g1.jpg" alt="">
+									</div>
+									<div class="gallery-photo-desc">
+										<p>Здесь описание к фотографии</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="gallery-photo">
+										<img src="<?php echo THEME_URI ?>/static/img/g1.jpg" alt="">
+									</div>
+									<div class="gallery-photo-desc">
+										<p>Здесь описание к фотографии</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="gallery-photo">
+										<img src="<?php echo THEME_URI ?>/static/img/g1.jpg" alt="">
+									</div>
+									<div class="gallery-photo-desc">
+										<p>Здесь описание к фотографии</p>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="gallery-photo">
+										<img src="<?php echo THEME_URI ?>/static/img/g1.jpg" alt="">
+									</div>
+									<div class="gallery-photo-desc">
+										<p>Здесь описание к фотографии</p>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-gallery-controls">
+								<div class="swiper-pagination"></div>
+								<div class="swiper-buttons">
+									<div class="swiper-prev sm">
+										<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18 7H2M2 7L7.80357 13M2 7L7.80357 1" stroke="#E53724" stroke-width="2"/>
+										</svg>
+									</div>
+									<div class="swiper-next sm">
+										<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18 7H2M2 7L7.80357 13M2 7L7.80357 1" stroke="#E53724" stroke-width="2"/>
+										</svg>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
