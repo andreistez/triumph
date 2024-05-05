@@ -28,5 +28,20 @@ Container::make( 'post_meta', __( 'Секции' ) )
 					->set_width( 50 )
 					->set_type( ['video'] )
 			] )
+
+			// About section.
+			->add_fields( 'about', __( 'О нас' ), [
+				Field::make( 'text', 'title', __( 'Заголовок' ) )
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) )
+					->set_width( 50 ),
+				Field::make( 'complex', 'items', __( 'Элементы' ) )
+					->set_width( 50 )
+					->add_fields( [
+						Field::make( 'image', 'image', __( 'Изображение' ) )
+							->set_width( 50 ),
+						Field::make( 'text', 'desc', __( 'Описание' ) )
+							->set_width( 50 )
+					] )
+			] ),
 	] );
 
