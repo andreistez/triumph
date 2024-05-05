@@ -1,0 +1,75 @@
+@import '../../src/scss/utils/helpers/helpers';
+@import '../../src/scss/utils/vars/vars';
+
+.hero {
+	padding: 125px 0 104px;
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 28px;
+
+		@media (min-width: $xl) {
+			flex-direction: row;
+		}
+	}
+
+	&-info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 28px;
+		width: 100%;
+
+		@media (min-width: $xl) {
+			width: calc(100% - 516px);
+			padding-right: 24px;
+		}
+	}
+
+	&-items {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 28px;
+	}
+
+	&-item {
+		display: flex;
+		align-items: center;
+		width: 100%;
+
+		@media (min-width: $md) {
+			width: calc(50% - 14px);
+
+		}
+
+		&-img {
+			width: 58px;
+			height: 48px;
+			margin-right: 16px;
+		}
+
+		p {
+			width: calc(100% - 74px);
+			@include text();
+		}
+	}
+
+	&-video {
+		width: 100%;
+		height: 400px;
+
+		video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border: 0;
+			border-radius: 28px;
+		}
+
+		@media (min-width: $xl) {
+			width: 488px;
+			height: 504px;
+		}
+	}
+}

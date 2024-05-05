@@ -1,11 +1,24 @@
+import Swiper from 'swiper';
+import { Navigation, Pagination} from 'swiper/modules';
 import { close } from "./global"
 import { outerClose } from "./global"
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
 
+	if( document.querySelectorAll( '.yt-lazy' ).length ){
+		const
+			tag = document.createElement( 'script' ),
+			firstScriptTag = document.getElementsByTagName( 'script' )[0]
+
+		tag.src = 'https://www.youtube.com/iframe_api'
+		tag.onload = loadYTVideo
+		firstScriptTag.parentNode.insertBefore( tag, firstScriptTag )
+	}
+
 	showMaps()
 	showBurgerMenu()
+	initSwiper('.swiper-gallery', 'auto')
 } )
 
 const showMaps = () => {
@@ -49,5 +62,52 @@ const showBurgerMenu = () => {
 
 	close('.header-wrapper')
 	outerClose('.header-wrapper')
+}
+
+const loadYTVideo = () => {
+	const videos = document.querySelectorAll( '.yt-lazy' )
+
+	window.YT.ready( () => {
+		videos.forEach( video => {
+			video.addEventListener( 'click', e => {
+				e.preventDefault()
+
+				const
+					inner = video.querySelector( '.yt-lazy-placeholder' ),
+					videoId = inner.dataset.video
+
+				if( ! videoId ) return
+
+				new window.YT.Player( inner.id, {
+					videoId,
+					events: {
+						'onReady': event => {
+							event.target.setVolume( 25 )
+							event.target.playVideo()
+						}
+					}
+				} )
+			} )
+		} )
+	} )
+}
+
+const initSwiper = (selector, view) => {
+	const swiper = new Swiper(selector, {
+		direction: 'horizontal',
+		slidesPerView: view,
+		spaceBetween: 16,
+
+		modules: [Pagination, Navigation],
+		pagination: {
+			clickable: 1,
+		  	el: '.swiper-pagination',
+		},
+
+		navigation: {
+		  nextEl: '.swiper-next',
+		  prevEl: '.swiper-prev',
+		},
+	  });
 }
 

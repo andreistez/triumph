@@ -1,0 +1,76 @@
+.swiper-prev, .swiper-next {
+	width: 48px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	background-color: $b-light;
+	cursor: pointer;
+	transition: opacity ease $tr;
+
+	&.sm {
+		width: 36px;
+		height: 36px;
+	}
+
+	&.swiper-button-disabled {
+		cursor: not-allowed;
+		opacity: 0.3;
+
+		&:hover {
+			opacity: 0.3;
+		}
+	}
+
+	&:hover {
+		opacity: $op;
+	}
+}
+
+.swiper-next {
+	transform: rotate(180deg);
+}
+
+.swiper-pagination {
+	counter-reset: counter-value 0;
+
+	.swiper-pagination-bullet {
+		background: transparent;
+		position: relative;
+		width: 32px;
+		height: 32px;
+
+		&::after {
+			counter-increment: counter-value; 
+			content: counter(counter-value, decimal-leading-zero);
+			position: absolute; 
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			font-family: $ff-decor;
+			color: $c-gray; 
+			font-size: 20px;
+			line-height: 24px;
+
+			@media (min-width: $md) {
+				font-size: 20px;
+			}
+		}
+
+		&-active {
+			&::after {
+				color: $c-red;
+			}
+		}
+	}
+}
+
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+	position: static;
+	top: auto;
+	left: auto;
+	right: auto;
+	bottom: auto;
+}
