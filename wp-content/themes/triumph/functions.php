@@ -50,11 +50,20 @@ function critick_init_theme(): void
 	add_theme_support( 'post-thumbnails' );
 
 	// Custom image sizes.
+	add_image_size( 'logo', 0, 40 );
+	add_image_size( 'logo@2x', 0, 80 );
+
 	add_image_size( 'hero-icon', 59, 48 );
 	add_image_size( 'hero-icon@2x', 118, 96 );
 
 	add_image_size( 'about', 266, 320 );
 	add_image_size( 'about@2x', 532, 640 );
+
+	add_image_size( 'poster', 591, 400 );
+	add_image_size( 'poster@2x', 1182, 800 );
+
+	add_image_size( 'slide', 486, 596 );
+	add_image_size( 'slide@2x', 972, 1192 );
 }
 
 add_action( 'wp_enqueue_scripts', 'critick_inclusion_enqueue' );

@@ -42,6 +42,32 @@ Container::make( 'post_meta', __( 'Секции' ) )
 						Field::make( 'text', 'desc', __( 'Описание' ) )
 							->set_width( 50 )
 					] )
-			] ),
+			] )
+
+			// Gallery section.
+			->add_fields( 'gallery', __( 'Галерея' ), [
+				Field::make( 'text', 'title', __( 'Заголовок' ) )
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) )
+					->set_width( 50 ),
+				Field::make( 'select', 'video_type', __( 'Тип видео' ) )
+					->add_options( ['yt' => 'YouTube', 'local' => 'Локальное'] )
+					->set_width( 50 ),
+				Field::make( 'file', 'video_local', __( 'Видео' ) )
+					->set_width( 50 )
+					->set_type( ['video'] )
+					->set_conditional_logic( [['field' => 'video_type', 'value' => 'local']] ),
+				Field::make( 'text', 'video_yt', __( 'YouTube URL' ) )
+					->set_width( 50 )
+					->set_conditional_logic( [['field' => 'video_type', 'value' => 'yt']] ),
+				Field::make( 'image', 'poster', __( 'Обложка видео' ) )
+					->set_width( 50 ),
+				Field::make( 'complex', 'gallery', __( 'Галерея' ) )
+					->add_fields( [
+						Field::make( 'image', 'image', __( 'Изображение' ) )
+							->set_width( 50 ),
+						Field::make( 'text', 'desc', __( 'Описание' ) )
+							->set_width( 50 )
+					] )
+			] )
 	] );
 
