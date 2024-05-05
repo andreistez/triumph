@@ -11,14 +11,22 @@ Container::make( 'post_meta', __( 'Секции' ) )
 
 			// Hero section.
 			->add_fields( 'hero', __( 'Главная секция' ), [
-				Field::make( 'image', 'bg_image', __( 'Фоновое изображение' ) )
-					->set_width( 25 ),
 				Field::make( 'text', 'title', __( 'Заголовок' ) )
-					->set_width( 25 ),
-				Field::make( 'rich_text', 'desc', __( 'Описание' ) )
-					->set_width( 25 ),
-				Field::make( 'text', 'text', __( 'Текст' ) )
-					->set_width( 25 )
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) )
+					->set_width( 50 ),
+				Field::make( 'text', 'button_label', __( 'Текст кнопки' ) )
+					->set_width( 50 ),
+				Field::make( 'complex', 'items', __( 'Элементы' ) )
+					->set_width( 50 )
+					->add_fields( [
+						Field::make( 'image', 'icon', __( 'Иконка' ) )
+							->set_width( 50 ),
+						Field::make( 'text', 'desc', __( 'Описание' ) )
+							->set_width( 50 )
+					] ),
+				Field::make( 'file', 'video', __( 'Видео' ) )
+					->set_width( 50 )
+					->set_type( ['video'] )
 			] )
 	] );
 
