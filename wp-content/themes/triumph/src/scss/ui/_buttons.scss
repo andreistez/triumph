@@ -65,8 +65,24 @@
 		}
 
 		&-red {
-			background-color: $c-red;
-			color: $c-white;
+			&::after {
+				content: 'Это бесплатно!';
+				font-family: $ff;
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				transform: translateX(-50%);
+				padding: 3px 8px;
+				font-family: $ff;
+				font-size: inherit;
+				font-weight: $fw-medium;
+				line-height: inherit;
+				text-align: center;
+				color: $c-white;
+				background-color: $c-red;
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 8px;
+			}
 		}
 	}
 }
