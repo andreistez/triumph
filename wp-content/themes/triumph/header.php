@@ -8,8 +8,11 @@
  */
 
 global $page, $paged;
-$site_description = get_bloginfo( 'description', 'display' );
-$logo             = carbon_get_theme_option( 'logo' );
+$site_description     = get_bloginfo( 'description', 'display' );
+$logo                 = carbon_get_theme_option( 'logo' ) ?? null;
+$working_time         = carbon_get_theme_option( 'working_time' ) ?? '';
+$phone                = carbon_get_theme_option( 'phone' ) ?? '';
+$phone_cleaned        = crit_clean_phone( $phone );
 ?>
 
 <!doctype html>
@@ -58,123 +61,83 @@ $logo             = carbon_get_theme_option( 'logo' );
 					<button class="burger-button">
 						<span></span>
 					</button>
-					<a href="/" class="header-logo">
-						<img src="<?php echo THEME_URI ?>/static/img/logo.svg" alt="">
-					</a>
+
+					<?php
+					if( $logo ){
+						echo '<a href="' . get_bloginfo( 'url' ) . '" class="header-logo">';
+						get_template_part( 'components/image', null, ['data' => crit_prepare_image_data( $logo, 'logo' )] );
+						echo '</a>';
+					}
+					?>
 				</div>
-				<div class="addresses desktop">
-					<address>
-						<p>г. Москва, ш. Энтузиастов, 33</p>
-					</address>
-					<div class="addresses-more">
-						<button class="show-maps">
-							<span></span>
-						</button>
-						<p>ещё 2 филиала</p>
-						<div class="hidden-addresses">
-							<div class="hidden-addresses-item">
-								<address>г. Москва, ш. Энтузиастов, 33</address>
-								<a href="#" target="_blank">
-									Смотреть на карте
-								</a>
-							</div>
-							<div class="hidden-addresses-item">
-								<address>г. Москва, Покровка, 10с5</address>
-								<a href="#" target="_blank">
-									Смотреть на карте
-								</a>
-							</div>
-							<div class="hidden-addresses-item">
-								<address>г. Москва, Измайловский проспект, 53</address>
-								<a href="#" target="_blank">
-									Смотреть на карте
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="header-worktime desktop">
-					<p>
-						Ежедневно <br>
-						с 10:00 до 21:00
-					</p>
-				</div>		
+
+				<div class="addresses desktop"><?php get_template_part( 'components/addresses' ) ?></div>
+
+				<?php
+				if( $working_time ) echo '<div class="header-worktime desktop"><p>', $working_time, '</p></div>';
+				?>
+
 				<button class="button sm desktop">
-					Получить консультацию
+					<?php _e( 'Получить консультацию', 'triumph' ) ?>
 				</button>
+
 				<div class="header-links">
-					<a href="#">
-						<img src="<?php echo THEME_URI ?>/static/img/whatsapp.svg" alt="">
-					</a>
-					<a href="#">
-						<img src="<?php echo THEME_URI ?>/static/img/telegram.svg" alt="">
-					</a>
-					<div class="phone">
-						<a href="tel:+79161326468">+7 (916) 132-64-68</a>
-					</div>
+					<?php
+					get_template_part( 'components/links' );
+
+					if( $phone ){
+						?>
+						<div class="phone">
+							<a href="tel:<?php echo esc_attr( $phone_cleaned ) ?>">
+								<?php echo esc_html( $phone ) ?>
+							</a>
+						</div>
+						<?php
+					}
+					?>
 				</div>
+
 				<div class="burger-menu">
 					<button class="close red"></button>
+
 					<?php
 					wp_nav_menu( [
 						'theme_location'  => 'header_menu',
-						'container'       => 'nav',
+						'container'		  => 'nav',
 						'container_class' => 'header-nav'
 					] );
 					?>
+
 					<div class="burger-menu-bottom">
 						<div class="burger-menu-box">
 							<div class="addresses mobile">
-								<address>
-									<p>г. Москва, <br> ш. Энтузиастов, 33</p>
-								</address>
-								<div class="addresses-more">
-									<button class="show-maps">
-										<span></span>
-									</button>
-									<p>ещё 2 филиала</p>
-									<div class="hidden-addresses">
-										<div class="hidden-addresses-item">
-											<address>г. Москва, ш. Энтузиастов, 33</address>
-											<a href="#" target="_blank">
-												Смотреть на карте
-											</a>
-										</div>
-										<div class="hidden-addresses-item">
-											<address>г. Москва, Покровка, 10с5</address>
-											<a href="#" target="_blank">
-												Смотреть на карте
-											</a>
-										</div>
-										<div class="hidden-addresses-item">
-											<address>г. Москва, Измайловский проспект, 53</address>
-											<a href="#" target="_blank">
-												Смотреть на карте
-											</a>
-										</div>
-									</div>
-								</div>
+								<?php get_template_part( 'components/addresses' ) ?>
 							</div>
-							<div class="header-worktime mobile">
-								<p>
-									Ежедневно <br>
-									с 10:00 до 21:00
-								</p>
-							</div>
+
+							<?php
+							if( $working_time )
+								echo '<div class="header-worktime mobile"><p>', $working_time, '</p></div>';
+							?>
 						</div>
+
 						<div class="header-links mobile">
-							<a href="#">
-								<img src="<?php echo THEME_URI ?>/static/img/whatsapp.svg" alt="">
-							</a>
-							<a href="#">
-								<img src="<?php echo THEME_URI ?>/static/img/telegram.svg" alt="">
-							</a>
-							<div class="phone mobile">
-								<a href="tel:+79161326468">+7 (916) 132-64-68</a>
-							</div>
-						</div>		
+							<?php
+							get_template_part( 'components/links' );
+
+							if( $phone ){
+								?>
+								<div class="phone mobile">
+									<a href="<?php echo esc_attr( $phone_cleaned ) ?>">
+										<?php echo esc_html( $phone ) ?>
+									</a>
+								</div>
+								<?php
+							}
+							?>
+						</div>
+
 						<button class="button sm mobile">
-							Получить консультацию
+							<?php _e( 'Получить консультацию', 'triumph' ) ?>
 						</button>
 					</div>
 				</div>

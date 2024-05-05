@@ -64,3 +64,14 @@ function crit_prepare_image_data( $image_id, string $size = 'full', array $atts 
 	];
 }
 
+/**
+ * Clean phone number for correct usage in href.
+ *
+ * @param string $phone
+ * @return string
+ */
+function crit_clean_phone( string $phone ): string
+{
+	return str_replace( ['-', '(', ')', ' '], '', $phone );
+}
+
