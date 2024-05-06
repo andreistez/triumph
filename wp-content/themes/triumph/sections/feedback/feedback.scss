@@ -1,0 +1,35 @@
+@import '../../src/scss/utils/helpers/helpers';
+@import '../../src/scss/utils/vars/vars';
+
+.feedback {
+	padding: 12px 0 128px;
+	background-color: $c-black;
+
+	h2 {
+		color: $c-white;
+		margin-bottom: 20px;
+		font-size: 56px;
+		line-height: 64px;
+	}
+
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+		gap: 28px;
+	}
+
+	&-info {
+		width: 50%;
+
+		p {
+			&:last-child {
+				@include textLg();
+				color: $c-white;
+			}
+		}
+	}
+
+	&-form {
+		width: 486px;
+	}
+}

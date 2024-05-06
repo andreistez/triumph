@@ -16,6 +16,7 @@ wp_enqueue_style( 'fc-format', THEME_URI . '/static/css/sections/format/format.m
 wp_enqueue_style( 'fc-steps', THEME_URI . '/static/css/sections/steps/steps.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-club', THEME_URI . '/static/css/sections/club/club.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-awards', THEME_URI . '/static/css/sections/awards/awards.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'fc-feedback', THEME_URI . '/static/css/sections/feedback/feedback.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'fc-hero', THEME_URI . '/static/js/hero/hero.min.js', [ 'jquery' ], THEME_VERSION, true );
 
 $sections = carbon_get_the_post_meta( 'page_sections' );
@@ -424,6 +425,22 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 								<path d="M18 7H2M2 7L7.80357 13M2 7L7.80357 1" stroke="#E53724" stroke-width="2"/>
 							</svg>
 						</div>
+				</div>
+			</div>
+		</section>
+		<section class="feedback">
+			<div class="container">
+				<div class="feedback-wrapper">
+					<div class="feedback-info">
+						<h2>
+							Просто попробуйте <br> и убедитесь, <span>что <br> акробатический <br> рок-н-ролл</span>  это круто!
+						</h2>
+						<p>
+							Мы предоставляем возможность бесплатного пробного посещение нашего клуба, чтобы вы и ваш ребенок убедились, что вам это подходит
+						</p>
+					</div>
+					<div class="feedback-form">
+					</div>
 				</div>
 			</div>
 		</section>
