@@ -15,6 +15,7 @@ wp_enqueue_style( 'fc-gallery', THEME_URI . '/static/css/sections/gallery/galler
 wp_enqueue_style( 'fc-format', THEME_URI . '/static/css/sections/format/format.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-steps', THEME_URI . '/static/css/sections/steps/steps.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-club', THEME_URI . '/static/css/sections/club/club.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'fc-awards', THEME_URI . '/static/css/sections/awards/awards.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'fc-hero', THEME_URI . '/static/js/hero/hero.min.js', [ 'jquery' ], THEME_VERSION, true );
 
 $sections = carbon_get_the_post_meta( 'page_sections' );
@@ -377,6 +378,52 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 							Здесь видео с рассказом о клубе
 						</div>
 					</div>
+				</div>
+			</div>
+		</section>
+		<section class="awards">
+			<div class="container">
+				<h2>Награды</h2>
+				<div class="awards-photos">
+					<div class="swiper swiper-awards">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="<?php echo THEME_URI ?>/static/img/a1.jpg" alt="">
+								<div class="awards-desc">
+									Описание за что награда
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="<?php echo THEME_URI ?>/static/img/a2.jpg" alt="">
+								<div class="awards-desc">
+									Описание за что награда
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="<?php echo THEME_URI ?>/static/img/a1.jpg" alt="">
+								<div class="awards-desc">
+									Описание за что награда
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="<?php echo THEME_URI ?>/static/img/a2.jpg" alt="">
+								<div class="awards-desc">
+									Описание за что награда
+								</div>
+							</div>
+						</div>
+						<div class="awards-pagination"></div>
+					</div>
+					<div class="swiper-prev">
+							<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18 7H2M2 7L7.80357 13M2 7L7.80357 1" stroke="#E53724" stroke-width="2"/>
+							</svg>
+						</div>
+						<div class="swiper-next">
+							<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18 7H2M2 7L7.80357 13M2 7L7.80357 1" stroke="#E53724" stroke-width="2"/>
+							</svg>
+						</div>
 				</div>
 			</div>
 		</section>

@@ -18,7 +18,8 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 	showMaps()
 	showBurgerMenu()
-	initSwiper('.swiper-gallery', 'auto', 16)
+	initSwiper('.swiper-gallery', 'auto', 16, '.swiper-pagination')
+	initSwiper('.swiper-awards', 'auto', 28, '.awards-pagination')
 	initSwiperPag('.swiper-format', 'auto')
 } )
 
@@ -93,7 +94,7 @@ const loadYTVideo = () => {
 	} )
 }
 
-const initSwiper = (selector, view, gap) => {
+const initSwiper = (selector, view, gap, pag) => {
 	const swiper = new Swiper(selector, {
 		slidesPerView: view,
 		spaceBetween: gap,
@@ -101,13 +102,13 @@ const initSwiper = (selector, view, gap) => {
 		modules: [Pagination, Navigation],
 		pagination: {
 			clickable: 1,
-		  	el: '.swiper-pagination',
+		  	el: pag,
 		},
 
 		navigation: {
 		  nextEl: '.swiper-next',
 		  prevEl: '.swiper-prev',
-		},
+		}
 	  })
 }
 
