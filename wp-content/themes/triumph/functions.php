@@ -68,6 +68,9 @@ function critick_init_theme(): void
 	add_image_size( 'slide', 486, 596 );
 	add_image_size( 'slide@2x', 972, 1192 );
 
+	add_image_size( 'award', 513, 360 );
+	add_image_size( 'award@2x', 1026, 720 );
+
 	add_image_size( 'poster', 591, 400 );
 	add_image_size( 'poster@2x', 1182, 800 );
 }

@@ -135,5 +135,18 @@ Container::make( 'post_meta', __( 'Секции' ) )
 				Field::make( 'text', 'video_desc', __( 'Описание' ) )
 					->set_width( 33 )
 			] )
+
+			// Awards section.
+			->add_fields( 'awards', __( 'Награды' ), [
+				Field::make( 'text', 'title', __( 'Заголовок' ) )
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) ),
+				Field::make( 'complex', 'photos', __( 'Фотографии' ) )
+					->add_fields( [
+						Field::make( 'image', 'image', __( 'Изображение' ) )
+							->set_width( 50 ),
+						Field::make( 'text', 'desc', __( 'Описание' ) )
+							->set_width( 33 )
+					] )
+			] )
 	] );
 
