@@ -40,22 +40,16 @@
 
 	&-video {
 		margin-bottom: 20px;
-		.yt-lazy {
-			width: 100%;
-			height: 320px;
+		width: 100%;
+		height: 320px;
 
-			@media (min-width: $md) {
-				height: 466px;
-			}
+		@media (min-width: $md) {
+			height: 466px;
+		}
 
-			@media (min-width: $xl) {
-				width: 591px;
-				height: 400px;
-			}
-
-			&-poster {
-				width: 100%;
-			}
+		@media (min-width: $xl) {
+			width: 591px;
+			height: 400px;
 		}
 
 		&-desc {

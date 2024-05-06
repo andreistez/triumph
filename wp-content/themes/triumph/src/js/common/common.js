@@ -108,7 +108,7 @@ const initSwiper = (selector, view, gap) => {
 		  nextEl: '.swiper-next',
 		  prevEl: '.swiper-prev',
 		},
-	  });
+	  })
 }
 
 const initSwiperPag = (selector, view) => {

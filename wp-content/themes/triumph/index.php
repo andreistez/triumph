@@ -13,6 +13,7 @@ wp_enqueue_style( 'fc-hero', THEME_URI . '/static/css/sections/hero/hero.min.css
 wp_enqueue_style( 'fc-about', THEME_URI . '/static/css/sections/about/about.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-gallery', THEME_URI . '/static/css/sections/gallery/gallery.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-format', THEME_URI . '/static/css/sections/format/format.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'fc-steps', THEME_URI . '/static/css/sections/steps/steps.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'fc-hero', THEME_URI . '/static/js/hero/hero.min.js', [ 'jquery' ], THEME_VERSION, true );
 
 $sections = carbon_get_the_post_meta( 'page_sections' );
@@ -262,6 +263,89 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 				</div>
 				<div class="button-wrapper">
 					<button class="button bg-red after">Записаться на пробное занятие</button>
+				</div>
+			</div>
+		</section>
+		<section class="steps">
+			<div class="container">
+				<h2>Как проходит <span>обучение</span></h2>
+				<div class="steps-wrapper">
+					<div class="steps-items">
+						<div class="step">
+							<img src="<?php echo THEME_URI ?>/static/img/arr-p.png" alt="">
+							<div class="step-inner">
+								<div class="step-num"></div>
+								<h5>Общая физическая подготовка</h5>
+								<p>
+									Объединение акробатических элементов
+									и элементы танца. На острие эмоций и в полной атмосфере праздника. 
+								</p>
+							</div>
+						</div>
+						<div class="step">
+							<img src="<?php echo THEME_URI ?>/static/img/arr-a.png" alt="">
+							<div class="step-inner">
+								<div class="step-num"></div>
+								<h5>Изучение базовых движений</h5>
+								<p>
+									Изучение основных движения рок-н-ролла и достижение отличной физической формы.
+								</p>
+							</div>
+						</div>
+						<div class="step">
+							<img src="<?php echo THEME_URI ?>/static/img/arr-r.png" alt="">
+							<div class="step-inner">
+								<div class="step-num"></div>
+								<h5>Переход к сложной хореографии</h5>
+								<p>
+									По мере освоения базовых шагов переходят к овладению сложной хореографией и акробатическимиэлементами.
+								</p>
+							</div>
+						</div>
+						<div class="step">
+							<div class="step-inner">
+								<div class="step-num"></div>
+								<h5>Успешное участие в соревнованиях</h5>
+								<p>
+									Постепенно наши ученикиначинают участвовать всоревнованиях и получатьспортивные разряды
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="steps-videos">
+						<div class="steps-videos-wrapper">
+							<div class="steps-video">
+								<div class="yt-lazy">
+									<div id="player-1" class="yt-lazy-placeholder" data-video="L3Dp4oGkn3k">
+										<img class="yt-lazy-poster" src="<?php echo THEME_URI ?>/static/img/s1.jpg" alt="">								
+										<button class="play-button">
+											<svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M16.7428 15.0857L6.45707 22.8C3.9143 24.7071 0.285644 22.8928 0.285644 19.7143L0.285644 4.28573C0.285643 1.10727 3.9143 -0.707062 6.45707 1.20001L16.7428 8.9143C18.7999 10.4572 18.7999 13.5429 16.7428 15.0857Z" fill="#E53724"/>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="steps-video-desc">
+									Здесь описание к видео
+								</div>
+							</div>
+							<div class="steps-video">
+								<div class="yt-lazy">
+									<div id="player-2" class="yt-lazy-placeholder" data-video="xJ_fFLgGHiU">
+										<img class="yt-lazy-poster" src="<?php echo THEME_URI ?>/static/img/s2.jpg" alt="">								
+										<button class="play-button">
+											<svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M16.7428 15.0857L6.45707 22.8C3.9143 24.7071 0.285644 22.8928 0.285644 19.7143L0.285644 4.28573C0.285643 1.10727 3.9143 -0.707062 6.45707 1.20001L16.7428 8.9143C18.7999 10.4572 18.7999 13.5429 16.7428 15.0857Z" fill="#E53724"/>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="steps-video-desc">
+									Здесь описание к видео
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
