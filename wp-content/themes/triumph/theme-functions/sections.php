@@ -53,14 +53,16 @@ Container::make( 'post_meta', __( 'Секции' ) )
 					->add_options( ['yt' => 'YouTube', 'local' => 'Локальное'] )
 					->set_width( 50 ),
 				Field::make( 'file', 'video_local', __( 'Видео' ) )
-					->set_width( 50 )
+					->set_width( 34 )
 					->set_type( ['video'] )
 					->set_conditional_logic( [['field' => 'video_type', 'value' => 'local']] ),
 				Field::make( 'text', 'video_yt', __( 'YouTube URL' ) )
-					->set_width( 50 )
+					->set_width( 34 )
 					->set_conditional_logic( [['field' => 'video_type', 'value' => 'yt']] ),
 				Field::make( 'image', 'poster', __( 'Обложка видео' ) )
-					->set_width( 50 ),
+					->set_width( 33 ),
+				Field::make( 'text', 'video_desc', __( 'Описание' ) )
+					->set_width( 33 ),
 				Field::make( 'complex', 'gallery', __( 'Галерея' ) )
 					->add_fields( [
 						Field::make( 'image', 'image', __( 'Изображение' ) )
@@ -114,9 +116,24 @@ Container::make( 'post_meta', __( 'Секции' ) )
 							->set_width( 34 ),
 						Field::make( 'text', 'video_yt', __( 'YouTube URL' ) )
 							->set_width( 33 ),
-						Field::make( 'text', 'desc', __( 'Описание' ) )
+						Field::make( 'text', 'video_desc', __( 'Описание' ) )
 							->set_width( 33 )
 					] )
+			] )
+
+			// Club section.
+			->add_fields( 'club', __( 'Клуб' ), [
+				Field::make( 'text', 'title', __( 'Заголовок' ) )
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) )
+					->set_width( 50 ),
+				Field::make( 'rich_text', 'text', __( 'Текст' ) )
+					->set_width( 50 ),
+				Field::make( 'image', 'poster', __( 'Обложка видео' ) )
+					->set_width( 34 ),
+				Field::make( 'text', 'video_yt', __( 'YouTube URL' ) )
+					->set_width( 33 ),
+				Field::make( 'text', 'video_desc', __( 'Описание' ) )
+					->set_width( 33 )
 			] )
 	] );
 
