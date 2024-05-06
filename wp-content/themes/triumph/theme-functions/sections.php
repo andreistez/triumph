@@ -69,5 +69,26 @@ Container::make( 'post_meta', __( 'Секции' ) )
 							->set_width( 50 )
 					] )
 			] )
+
+			// Format section.
+			->add_fields( 'format', __( 'Формат' ), [
+				Field::make( 'text', 'title', __( 'Заголовок' ) )
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) )
+					->set_width( 50 ),
+				Field::make( 'text', 'button_label', __( 'Текст кнопки' ) )
+					->set_width( 50 ),
+				Field::make( 'complex', 'items', __( 'Элементы' ) )
+					->add_fields( [
+						Field::make( 'image', 'image', __( 'Изображение' ) )
+							->set_width( 25 ),
+						Field::make( 'text', 'title', __( 'Заголовок' ) )
+							->set_width( 25 ),
+						Field::make( 'text', 'desc', __( 'Описание' ) )
+							->set_width( 25 ),
+						Field::make( 'color', 'bg_color', __( 'Цвет фона' ) )
+							->set_alpha_enabled()
+							->set_width( 25 )
+					] )
+			] )
 	] );
 
