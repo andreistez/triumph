@@ -115,18 +115,19 @@
 	}
 
 	.swiper-gallery-controls {
+		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
 
 	.swiper-pagination {
-		display: flex;
 		justify-content: center;
-		margin-right: 15px;
+		margin: 0;
 
 		@media (min-width: $xl) {
 			justify-content: flex-start;
+			margin-right: 15px;
 		}
 	}
 
@@ -135,7 +136,7 @@
 		align-items: center;
 		gap: 8px;
 
-		@media (min-width: $lg) {
+		@media (min-width: $xl) {
 			display: flex;
 		}
 	}

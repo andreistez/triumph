@@ -32,7 +32,9 @@
 	transform: rotate(180deg);
 }
 
-.swiper-pagination {
+.swiper-pagination, .format-pagination {
+	display: flex;
+	margin: 20px 0;
 	counter-reset: counter-value 0;
 
 	.swiper-pagination-bullet {

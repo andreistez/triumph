@@ -1,0 +1,131 @@
+@import '../../src/scss/utils/helpers/helpers';
+@import '../../src/scss/utils/vars/vars';
+
+.format {
+	padding: 28px 0;
+
+	@media (min-width: $md) {
+		padding: 40px 0;
+	}
+
+	@media (min-width: $xl) {
+		padding: 52px 0;
+	}
+
+	h2 {
+		color: $c-black;
+		text-align: center;
+	}
+
+	&-items {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+
+	.swiper {
+		overflow: visible;
+
+		@media (min-width: $xl) {
+			margin-bottom: 40px;
+		}
+	}
+
+	.swiper-slide {
+		width: 300px;
+		height: 387px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		position: relative;
+		border-radius: $border28;
+		position: relative;
+		gap: 28px;
+
+		@media (min-width: $md) {
+			width: 383px;
+			height: 448px;
+		}
+
+		&-img {
+			width: 100%;
+			height: 251px;
+			margin-bottom: 28px;
+
+			@media (min-width: $md) {
+				height: 268px;
+			}
+		}
+
+		img {
+			object-fit: cover;
+		}
+
+		&:first-child, &:nth-child(2), &:last-child {
+			&::before {
+				content: '';
+				width: 100%;
+				height: 85%;
+				display: block;
+				border-radius: $border28;
+				background-color: #E537241A;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: -1;
+			}
+		}
+
+		&:nth-child(2) {
+			&::before {
+				content: '';
+				width: 100%;
+				height: 85%;
+				display: block;
+				border-radius: $border28;
+				background-color: #5C3A841A;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: -1;
+			}
+		}
+
+		&:last-child {
+			&::before {
+				content: '';
+				width: 100%;
+				height: 85%;
+				display: block;
+				border-radius: $border28;
+				background-color: #1697961A;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: -1;
+			}
+		}
+	}
+
+	&-inner {
+		width: 100%;
+		height: 100%;
+		padding: 0 40px 40px 40px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		border-radius: $border28;
+
+		p {
+			margin-top: auto;
+		}
+
+		h4 {
+			max-width: 250px;
+		}
+	}
+
+	.format-pagination {
+		justify-content: center;
+	}
+}

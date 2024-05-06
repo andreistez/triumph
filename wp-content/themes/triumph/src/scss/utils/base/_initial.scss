@@ -65,7 +65,15 @@ address {
 	width: 100%;
 	min-height: 100dvh;
 	overflow: hidden;
-	margin-top: 82px;
+	margin-top: 84px;
+
+	@media (min-width: $md) {
+		margin-top: 84px;
+	}
+
+	@media (min-width: $xl) {
+		margin-top: 88.2px;
+	}
 
 	.footer {
 		margin-top: auto

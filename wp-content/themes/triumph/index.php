@@ -12,6 +12,7 @@ get_header();
 wp_enqueue_style( 'fc-hero', THEME_URI . '/static/css/sections/hero/hero.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-about', THEME_URI . '/static/css/sections/about/about.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-gallery', THEME_URI . '/static/css/sections/gallery/gallery.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'fc-format', THEME_URI . '/static/css/sections/format/format.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'fc-hero', THEME_URI . '/static/js/hero/hero.min.js', [ 'jquery' ], THEME_VERSION, true );
 
 $sections = carbon_get_the_post_meta( 'page_sections' );
@@ -219,6 +220,48 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</section>
+		<section class="format">
+			<div class="container">
+				<h2>Формат <span>занятий</span></h2>
+				<div class="format-wrapper">
+					<div class="swiper swiper-format">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="format-item-img">
+									<img src="<?php echo THEME_URI ?>/static/img/f1.png" alt="">
+								</div>
+								<div class="format-inner">
+									<h4>Индивидуальные в парах</h4>
+									<p>от 2000 ₽/занятие</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="format-item-img">
+									<img src="<?php echo THEME_URI ?>/static/img/f2.png" alt="">
+								</div>
+								<div class="format-inner">
+									<h4>В командах</h4>
+									<p>от 2000 ₽/занятие</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="format-item-img">
+									<img src="<?php echo THEME_URI ?>/static/img/f3.png" alt="">
+								</div>
+								<div class="format-inner">
+									<h4>В группах</h4>
+									<p>от 2000 ₽/занятие</p>
+								</div>
+							</div>
+						</div>
+						<div class="format-pagination"></div>
+					</div>
+				</div>
+				<div class="button-wrapper">
+					<button class="button bg-red after">Записаться на пробное занятие</button>
 				</div>
 			</div>
 		</section>
