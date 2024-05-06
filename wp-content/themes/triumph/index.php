@@ -14,6 +14,7 @@ wp_enqueue_style( 'fc-about', THEME_URI . '/static/css/sections/about/about.min.
 wp_enqueue_style( 'fc-gallery', THEME_URI . '/static/css/sections/gallery/gallery.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-format', THEME_URI . '/static/css/sections/format/format.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-steps', THEME_URI . '/static/css/sections/steps/steps.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'fc-club', THEME_URI . '/static/css/sections/club/club.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'fc-hero', THEME_URI . '/static/js/hero/hero.min.js', [ 'jquery' ], THEME_VERSION, true );
 
 $sections = carbon_get_the_post_meta( 'page_sections' );
@@ -344,6 +345,36 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 									Здесь описание к видео
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="club">
+			<div class="container">
+				<h2>О <span>клубе</span></h2>
+				<div class="club-wrapper">
+					<div class="club-info">
+						<p>
+							Мы рады представить вам наш клуб, который стал яркой звездой в этом захватывающем виде спорта. <br><br>
+							Наш клуб - молодые амбициозные тренеры, высшей спортивной подготовки, вырастившие множество чемпионов к своему молодому возрасту. <br><br>
+							Наше главное желание - подарить детям незабываемые эмоции и оставить след в их сердцах. Мы уверены, что наш клуб станет яркой точкой для любого ребёнка и оставит потрясающие воспоминания на всю жизнь. <br><br>
+							Доверьтесь нашей команде профессионалов и позвольте нам сделать детство вашего ребёнка счастливым. Ведь каждое его выступление станет настоящим триумфом стиля, энергии и таланта.
+						</p>
+					</div>
+					<div class="club-video">
+						<div class="yt-lazy">
+							<div id="player-1a" class="yt-lazy-placeholder" data-video="Kq2pjFd0EAY">
+								<img class="yt-lazy-poster" src="<?php echo THEME_URI ?>/static/img/c1.jpg" alt="">								
+								<button class="play-button">
+									<svg width="19" height="24" viewBox="0 0 19 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M16.7428 15.0857L6.45707 22.8C3.9143 24.7071 0.285644 22.8928 0.285644 19.7143L0.285644 4.28573C0.285643 1.10727 3.9143 -0.707062 6.45707 1.20001L16.7428 8.9143C18.7999 10.4572 18.7999 13.5429 16.7428 15.0857Z" fill="#E53724"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="club-video-desc">
+							Здесь видео с рассказом о клубе
 						</div>
 					</div>
 				</div>
