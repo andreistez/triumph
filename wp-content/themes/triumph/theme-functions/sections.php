@@ -86,8 +86,36 @@ Container::make( 'post_meta', __( 'Секции' ) )
 						Field::make( 'text', 'desc', __( 'Описание' ) )
 							->set_width( 25 ),
 						Field::make( 'color', 'bg_color', __( 'Цвет фона' ) )
-							->set_alpha_enabled()
 							->set_width( 25 )
+					] )
+			] )
+
+			// Steps section.
+			->add_fields( 'steps', __( 'Шаги' ), [
+				Field::make( 'text', 'title', __( 'Заголовок' ) )
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) )
+					->set_width( 50 ),
+				Field::make( 'complex', 'steps', __( 'Шаги' ) )
+					->add_fields( [
+						Field::make( 'select', 'arrow_type', __( 'Тип стрелки' ) )
+							->add_options( ['none' => 'Нет', 'p' => 'Фиолетовая', 'a' => 'Зелёная', 'r' => 'Розовая'] )
+							->set_width( 25 ),
+						Field::make( 'text', 'title', __( 'Заголовок' ) )
+							->set_width( 25 ),
+						Field::make( 'textarea', 'desc', __( 'Описание' ) )
+							->set_rows( 4 )
+							->set_width( 25 ),
+						Field::make( 'color', 'bg_color', __( 'Цвет фона' ) )
+							->set_width( 25 )
+					] ),
+				Field::make( 'complex', 'videos', __( 'Видео' ) )
+					->add_fields( [
+						Field::make( 'image', 'poster', __( 'Обложка видео' ) )
+							->set_width( 34 ),
+						Field::make( 'text', 'video_yt', __( 'YouTube URL' ) )
+							->set_width( 33 ),
+						Field::make( 'text', 'desc', __( 'Описание' ) )
+							->set_width( 33 )
 					] )
 			] )
 	] );
