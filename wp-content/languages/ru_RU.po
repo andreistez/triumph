@@ -378,15 +378,15 @@ msgstr "Добавить или удалить рубрики паттернов
 msgid "Function %s used incorrectly in PHP."
 msgstr "Функция %s неправильно используется в PHP."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1068
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1069
 msgid "Where the template originally comes from e.g. 'theme'"
 msgstr "Откуда был взят шаблон, например \"тема\""
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1063
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1064
 msgid "Human readable text for the author."
 msgstr "Человекочитаемый текст для автора."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:831
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:832
 msgid "Unknown author"
 msgstr "Неизвестный автор"
 
@@ -750,7 +750,7 @@ msgid "sub item"
 msgstr "дочерний элемент"
 
 #. translators: 1: theme.json, 2: settings.spacing.spacingScale
-#: wp-includes/class-wp-theme-json.php:3513
+#: wp-includes/class-wp-theme-json.php:3531
 msgid "Some of the %1$s %2$s values are invalid"
 msgstr "Некоторые из значений %1$s %2$s недействительны"
 
@@ -1285,7 +1285,7 @@ msgstr "Не удалось определить директорию содер
 msgid "Whether the theme is a block-based theme."
 msgstr "Основана ли тема на блоках."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1055
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1056
 msgid "The date the template was last modified, in the site's timezone."
 msgstr "Дата последнего изменения шаблона в часовом поясе сайта."
 
@@ -2047,18 +2047,18 @@ msgid "Logged in as %1$s. <a href=\"%2$s\">Edit your profile</a>. <a href=\"%3$s
 msgstr "Вы вошли как %1$s. <a href=\"%2$s\">Изменить свой профиль</a>. <a href=\"%3$s\">Выйти?</a>"
 
 #. translators: %s: Digit to indicate multiple of sizing, eg. 2X-Large.
-#: wp-includes/class-wp-theme-json.php:3589
+#: wp-includes/class-wp-theme-json.php:3607
 msgid "%sX-Large"
 msgstr "%sXL"
 
 #. translators: %s: Digit to indicate multiple of sizing, eg. 2X-Small.
-#: wp-includes/class-wp-theme-json.php:3552
+#: wp-includes/class-wp-theme-json.php:3570
 msgid "%sX-Small"
 msgstr "%sXS"
 
 #. translators: 1: theme.json, 2: Value name, 3: Value path, 4: Another value
 #. name.
-#: wp-includes/class-wp-theme-json.php:2171
+#: wp-includes/class-wp-theme-json.php:2189
 msgid "Your %1$s file uses a dynamic value (%2$s) for the path at %3$s. However, the value at %3$s is also a dynamic value (pointing to %4$s) and pointing to another dynamic value is not supported. Please update %3$s to point directly to %4$s."
 msgstr "Ваш файл %1$s использует динамическое значение (%2$s) для пути в %3$s. Однако значение в %3$s также является динамическим значением (указывающим на %4$s), и указание на другое динамическое значение не поддерживается. Обновите %3$s, чтобы он указывал непосредственно на %4$s."
 
@@ -2122,7 +2122,7 @@ msgstr "Ваша реализация кеша объектов не подде�
 
 #. translators: Custom template title in the Site Editor, referencing a deleted
 #. author. %s: Author nicename.
-#: wp-includes/block-template-utils.php:818
+#: wp-includes/block-template-utils.php:859
 msgid "Deleted author: %s"
 msgstr "Удаленный автор: %s"
 
@@ -2132,7 +2132,7 @@ msgstr "Удаленный автор: %s"
 #. name.
 #: wp-includes/block-template-utils.php:623
 #: wp-includes/block-template-utils.php:699
-#: wp-includes/block-template-utils.php:832
+#: wp-includes/block-template-utils.php:873
 msgid "Template for %s"
 msgstr "Шаблон для %s"
 
@@ -2896,47 +2896,47 @@ msgstr "Содержимое элемента %s из URL."
 msgid "The URL to process."
 msgstr "URL для обработки."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1093
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1094
 msgid "Where the template part is intended for use (header, footer, etc.)"
 msgstr "Где предполагается использовать часть шаблона ( шапка, подвал и т.д.)"
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1084
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1085
 msgid "Whether a template is a custom template."
 msgstr "Является ли шаблон пользовательским."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1050
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1051
 msgid "The ID for the author of the template."
 msgstr "ID автора шаблона."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1017
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1018
 msgid "HTML title for the template, transformed for display."
 msgstr "HTML-заголовок для шаблона, преобразованный для показа."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1012
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1013
 msgid "Title for the template, as it exists in the database."
 msgstr "Заголовок шаблона в том виде, в котором он существует в базе данных."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:998
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:999
 msgid "Version of the content block format used by the template."
 msgstr "Версия формата блоков содержимого, используемая шаблоном."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:993
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:994
 msgid "Content for the template, as it exists in the database."
 msgstr "Содержимое шаблона, как он существует в базе данных."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:981
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:982
 msgid "Source of a customized template"
 msgstr "Источник персонализированного шаблона"
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:970
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:971
 msgid "Type of template."
 msgstr "Тип шаблона."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:926
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:927
 msgid "Post type to get the templates for."
 msgstr "Тип записи, для которого нужно получить шаблоны."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:922
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:923
 msgid "Limit to the specified template part area."
 msgstr "Ограничение определённой области шаблона."
 
@@ -3442,11 +3442,11 @@ msgstr "Ссылка на формат записи"
 msgid "The calendar block is hidden because there are no published posts."
 msgstr "Блок календаря скрыт, потому что нет опубликованных сообщений."
 
-#: wp-includes/block-template-utils.php:1258
+#: wp-includes/block-template-utils.php:1299
 msgid "Unable to open export file (archive) for writing."
 msgstr "Невозможно открыть файл экспорта (архив) для записи."
 
-#: wp-includes/block-template-utils.php:1249
+#: wp-includes/block-template-utils.php:1290
 msgid "Zip Export not supported."
 msgstr "Экспорт Zip не поддерживается."
 
@@ -4405,66 +4405,66 @@ msgstr "Идентификатор типа виджета."
 msgid "Sort collection by user attribute."
 msgstr "Сортировать коллекцию по пользовательскому атрибуту."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1044
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1045
 msgid "Theme file exists."
 msgstr "Файл темы существует"
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1038
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1039
 msgid "Post ID."
 msgstr "ID записи."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1031
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1032
 msgid "Status of template."
 msgstr "Статус шаблона."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1025
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1026
 msgid "Description of template."
 msgstr "Описание шаблона."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1006
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:1007
 msgid "Title of template."
 msgstr "Заголовок шаблона."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:987
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:988
 msgid "Content of template."
 msgstr "Содержимое шаблона."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:975
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:976
 msgid "Source of template"
 msgstr "Источник шаблона"
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:965
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:966
 msgid "Theme identifier for the template."
 msgstr "Идентификатор темы для шаблона."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:957
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:958
 msgid "Unique slug identifying the template."
 msgstr "Уникальный ярлык для идентификации шаблона."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:951
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:952
 msgid "ID of template."
 msgstr "ID шаблона."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:918
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:919
 msgid "Limit to the specified post id."
 msgstr "Ограничить до указанного ID записи."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:504
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:505
 msgid "The template has already been deleted."
 msgstr "Этот шаблон уже удалён."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:480
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:481
 msgid "Templates based on theme files can't be removed."
 msgstr "Нельзя удалить шаблоны основанные на файлах темы."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:303
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:332
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:430
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:477
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:304
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:333
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:431
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:478
 msgid "No templates exist with that id."
 msgstr "Никаких шаблонов с этим идентификатором не существует."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:189
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:190
 msgid "Sorry, you are not allowed to access the templates on this site."
 msgstr "К сожалению, вам не разрешен доступ к шаблонам на этом сайте."
 
@@ -4806,7 +4806,8 @@ msgstr "Соответствующие шаблоны не найдены."
 msgid "Empty template: %s"
 msgstr "Пустой шаблон: %s"
 
-#: wp-includes/block-template-utils.php:752
+#: wp-includes/block-template-utils.php:742
+#: wp-includes/block-template-utils.php:810
 msgid "No theme is defined for this template."
 msgstr "Для этого шаблона не была определена тема."
 
@@ -6063,7 +6064,7 @@ msgstr "Ключевое слово схемы \"type\" для %1$s может �
 #. translators: 1: Theme name. 2: Theme slug.
 #: wp-includes/block-template-utils.php:637
 #: wp-includes/block-template-utils.php:716
-#: wp-includes/block-template-utils.php:848 wp-includes/rest-api.php:730
+#: wp-includes/block-template-utils.php:889 wp-includes/rest-api.php:730
 #: wp-includes/js/dist/block-library.js:32487
 #: wp-includes/js/dist/edit-site.js:12537
 #: wp-includes/js/dist/edit-site.js:14265
@@ -6714,7 +6715,7 @@ msgid "Slug"
 msgstr "Ярлык"
 
 #. translators: %s: Digit to indicate multiple of sizing, eg. 2X-Small.
-#: wp-includes/class-wp-theme-json.php:3552
+#: wp-includes/class-wp-theme-json.php:3570
 #: wp-includes/js/dist/block-library.js:53560
 #: wp-includes/js/dist/components.js:59631
 msgid "Small"
@@ -8599,7 +8600,7 @@ msgstr "Вам требуется более высокий уровень до�
 #: wp-admin/includes/class-custom-image-header.php:1032
 #: wp-admin/includes/file.php:638 wp-admin/media-upload.php:38
 #: wp-admin/themes.php:27 wp-admin/themes.php:70 wp-admin/users.php:158
-#: wp-admin/js/tags.js:62 wp-admin/js/updates.js:2327
+#: wp-admin/js/tags.js:62 wp-admin/js/updates.js:2354
 #: wp-admin/network/site-users.php:158
 msgid "Something went wrong."
 msgstr "Что-то пошло не так."
@@ -10733,7 +10734,7 @@ msgstr "базовый путь REST для таксономии."
 msgid "+ %s"
 msgstr "+ %s"
 
-#: wp-includes/l10n.php:1671
+#: wp-includes/l10n.php:1687
 msgctxt "default site language"
 msgid "Site Default"
 msgstr "Основной язык сайта"
@@ -10981,7 +10982,7 @@ msgstr "Число опубликованных записей элемента.
 msgid "Unique identifier for the user."
 msgstr "Уникальный идентификатор пользователя."
 
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:521
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:522
 msgid "The template cannot be deleted."
 msgstr "Шаблон не может быть удалён."
 
@@ -12074,7 +12075,7 @@ msgstr "Элементы не существуют."
 #: wp-includes/customize/class-wp-customize-theme-control.php:260
 #: wp-admin/includes/theme.php:1071 wp-admin/theme-install.php:408
 #: wp-admin/theme-install.php:488 wp-admin/themes.php:616
-#: wp-admin/themes.php:988 wp-admin/themes.php:1222 wp-admin/js/updates.js:1802
+#: wp-admin/themes.php:988 wp-admin/themes.php:1222 wp-admin/js/updates.js:1829
 msgctxt "theme"
 msgid "Activate %s"
 msgstr "Активировать %s"
@@ -13971,7 +13972,7 @@ msgstr "Текст ссылки"
 #: wp-admin/theme-install.php:420 wp-admin/theme-install.php:437
 #: wp-admin/themes.php:625 wp-admin/themes.php:634 wp-admin/themes.php:995
 #: wp-admin/themes.php:1003 wp-admin/themes.php:1225 wp-admin/themes.php:1236
-#: wp-admin/js/updates.js:1817
+#: wp-admin/js/updates.js:1844
 msgid "Live Preview"
 msgstr "Просмотреть"
 
@@ -14104,12 +14105,12 @@ msgstr "Следующие записи"
 msgid "Older posts"
 msgstr "Предыдущие записи"
 
-#: wp-includes/l10n.php:1700
+#: wp-includes/l10n.php:1716
 msgctxt "translations"
 msgid "Available"
 msgstr "Доступные"
 
-#: wp-includes/l10n.php:1663
+#: wp-includes/l10n.php:1679
 msgctxt "translations"
 msgid "Installed"
 msgstr "Установленные"
@@ -14166,7 +14167,7 @@ msgid "F j, Y"
 msgstr "d.m.Y"
 
 #. translators: Custom template title in the Site Editor. %s: Author name.
-#: wp-includes/block-template-utils.php:826
+#: wp-includes/block-template-utils.php:867
 msgid "Author: %s"
 msgstr "Автор: %s"
 
@@ -15262,7 +15263,7 @@ msgstr "По правому краю"
 #: wp-includes/class-wp-customize-widgets.php:805
 #: wp-admin/includes/ajax-actions.php:1107
 #: wp-admin/includes/ajax-actions.php:2379 wp-admin/js/media.js:127
-#: wp-admin/js/media.js:132 wp-admin/js/updates.js:2336
+#: wp-admin/js/media.js:132 wp-admin/js/updates.js:2363
 msgid "An error has occurred. Please reload the page and try again."
 msgstr "Произошла ошибка. Пожалуйста, обновите страницу и повторите попытку."
 
@@ -15669,7 +15670,7 @@ msgid "No tags found."
 msgstr "Меток не найдено."
 
 #. translators: 1: Script name, 2: wp_enqueue_scripts
-#: wp-includes/functions.wp-scripts.php:324
+#: wp-includes/functions.wp-scripts.php:318
 msgid "Do not deregister the %1$s script in the administration area. To target the front-end theme, use the %2$s hook."
 msgstr "Не отменяйте регистрацию скрипта %1$s в панели управления. Чтобы сделать это только на внешней части сайта, используйте действие %2$s."
 
@@ -15848,7 +15849,7 @@ msgid "Attachment Details"
 msgstr "Детали вложения"
 
 #. translators: %s: Digit to indicate multiple of sizing, eg. 2X-Large.
-#: wp-includes/block-editor.php:173 wp-includes/class-wp-theme-json.php:3589
+#: wp-includes/block-editor.php:173 wp-includes/class-wp-theme-json.php:3607
 #: wp-includes/media-template.php:913 wp-includes/media-template.php:993
 #: wp-includes/media-template.php:1184 wp-includes/media.php:4419
 #: wp-includes/js/dist/block-editor.js:8990
@@ -16559,7 +16560,7 @@ msgstr "Извините, вам не разрешено просматрива�
 #: wp-includes/class-wp-xmlrpc-server.php:1499
 #: wp-includes/class-wp-xmlrpc-server.php:5469
 #: wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:1301
-#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:613
+#: wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php:614
 msgid "Invalid author ID."
 msgstr "Неверный ID автора."
 
@@ -19121,7 +19122,7 @@ msgid "%s is a protected WP option and may not be modified"
 msgstr "%s &#8212; защищённая опция WP и не может быть изменена"
 
 #. translators: Used between list items, there is a space after the comma.
-#: wp-includes/class-wp-locale.php:241 wp-includes/l10n.php:1903
+#: wp-includes/class-wp-locale.php:241 wp-includes/l10n.php:1919
 #: wp-includes/js/dist/block-editor.js:64471
 msgid ", "
 msgstr ", "
@@ -20149,7 +20150,7 @@ msgstr "Размер"
 msgid "Full Size"
 msgstr "Полный"
 
-#: wp-includes/block-editor.php:172 wp-includes/class-wp-theme-json.php:3571
+#: wp-includes/block-editor.php:172 wp-includes/class-wp-theme-json.php:3589
 #: wp-includes/media-template.php:912 wp-includes/media-template.php:992
 #: wp-includes/media-template.php:1183 wp-includes/media.php:4418
 #: wp-includes/js/dist/block-editor.js:8987
