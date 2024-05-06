@@ -29,7 +29,7 @@
 
 		img {
 			width: auto;
-			max-height: 40px;
+			height: 40px;
 		}
 	}
 
@@ -150,6 +150,11 @@
 		a {
 			@include textLgBold();
 			color: $c-black;
+			
+			img {
+				width: 24px;
+				height: 24px;
+			}
 		}
 
 		.phone {

@@ -2,7 +2,15 @@
 @import '../../src/scss/utils/vars/vars';
 
 .hero {
-	padding: 125px 0 104px;
+	padding: 40px 0 40px;
+
+	@media (min-width: $md) {
+		padding: 40px 0 80px;
+	}
+
+	@media (min-width: $xl) {
+		padding: 40px 0 104px;
+	}
 
 	&-wrapper {
 		display: flex;
