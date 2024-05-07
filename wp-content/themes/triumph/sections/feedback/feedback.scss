@@ -99,6 +99,30 @@
 		}
 	}
 
+	form {
+		.wpcf7-response-output {
+			color: $c-white;
+			padding: 0;
+			margin: 20px 0 0;
+			border: none;
+			text-align: center
+		}
+
+		&.invalid {
+			input {
+				border-color: $c-red
+			}
+
+			.wpcf7-response-output {
+				color: $c-red
+			}
+		}
+
+		&.sent .wpcf7-response-output {
+			color: $c-aqua
+		}
+	}
+
 	&-form {
 		width: 100%;
 		display: flex;
