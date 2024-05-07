@@ -2,24 +2,52 @@
 @import '../../src/scss/utils/vars/vars';
 
 .feedback {
-	padding: 12px 0 128px;
+	padding: 28px 0 48px;
+
+	@media (min-width: $md) {
+		padding: 40px 0 80px;
+	}
+
+	@media (min-width: $xl) {
+		padding: 12px 0 128px;
+	}
+
 	background-color: $c-black;
 
 	h2 {
 		color: $c-white;
-		margin-bottom: 20px;
-		font-size: 56px;
-		line-height: 64px;
+		margin-bottom: 8px;
+		font-size: 32px;
+		line-height: 40px;
+
+		@media (min-width: $md) {
+			font-size: 56px;
+			line-height: 64px;
+			margin-bottom: 20px;
+		}
 	}
 
 	&-wrapper {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
-		gap: 28px;
+		gap: 20px;
+
+		@media (min-width: $md) {
+			gap: 28px;
+		}
+
+		@media (min-width: $lg) {
+			flex-direction: row;
+		}
 	}
 
 	&-info {
-		width: 50%;
+		width: 100%;
+
+		@media (min-width: $lg) {
+			width: 50%;
+		}
 
 		p {
 			&:last-child {
@@ -30,6 +58,141 @@
 	}
 
 	&-form {
-		width: 486px;
+		width: 100%;
+		max-width: 100%;
+
+		@media (min-width: $lg) {
+			max-width: 486px;
+		}
 	}
 }
+
+.wpcf7 {
+	width: 100%;
+
+	legend {
+		font-family: $ff;
+		font-size: 28px;
+		font-weight: $fw-bold;
+		line-height: 28px;
+		text-align: left;
+		color: $c-white;
+		margin-bottom: 56px;
+		position: relative;
+
+		&::before {
+			content: 'Это бесплатно!';
+			font-family: $ff;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			padding: 0 8px;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: $fw-medium;
+			line-height: 24px;
+			text-align: center;
+			color: $c-white;
+			background-color: $c-red;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+	}
+
+	&-form {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: $c-dark;
+		padding: 20px;
+		border-radius: $border28;
+
+		@media (min-width: $md) {
+			padding: 40px;
+		}
+	}
+
+	label {
+		margin-bottom: 12px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	input {
+		width: 100%;
+		@include textLg();
+		color: $c-white;
+		border-radius: 60px;
+		padding: 15px 27px;
+		background-color: $c-black;
+		border: 1px solid #32312e;
+	}
+
+	.checkbox-wrapper {
+		display: flex;
+		flex-direction: column;
+		@include textSm();
+		color: $c-white;
+		position: relative;
+
+		@media (min-width: $md) {
+			flex-direction: row;
+		}
+
+		input[type="checkbox"] {
+			position: absolute;
+			z-index: -1;
+			opacity: 0;
+			margin: 0;
+		}
+
+		& input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
+			font-size: 15px;
+		}	
+
+		.wpcf7-form-control-wrap {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			margin-bottom: 20px;
+
+			@media (min-width: $md) {
+				margin-right: 8px;
+				margin-bottom: 0;
+			}
+
+			.wpcf7-list-item {
+				margin: 0;
+				padding-left: 40px;
+
+				&-label {
+					display: flex;
+					align-items: center;
+
+					&::before {
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						content: "✓";
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 22px;
+						height: 22px;
+						font-size: 0;
+						border: 2px solid $c-red;
+						background-color: transparent;
+						margin-right: 8px;
+						border-radius: 100%;
+						color: $c-red;
+						transition: font-size ease $tr;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}	

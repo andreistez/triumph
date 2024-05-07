@@ -440,6 +440,7 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 						</p>
 					</div>
 					<div class="feedback-form">
+					 	<?php echo do_shortcode( '[contact-form-7 id="13def80" title="Запись на пробное занятие"]' ) ?>
 					</div>
 				</div>
 			</div>
