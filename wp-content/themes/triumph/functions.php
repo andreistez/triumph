@@ -59,6 +59,9 @@ function critick_init_theme(): void
 	add_image_size( 'hero-icon', 59, 48 );
 	add_image_size( 'hero-icon@2x', 118, 96 );
 
+	add_image_size( 'team', 243, 360 );
+	add_image_size( 'team@2x', 486, 720 );
+
 	add_image_size( 'about', 266, 320 );
 	add_image_size( 'about@2x', 532, 640 );
 

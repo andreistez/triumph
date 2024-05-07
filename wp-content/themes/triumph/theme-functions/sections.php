@@ -145,7 +145,7 @@ Container::make( 'post_meta', __( 'Секции' ) )
 						Field::make( 'image', 'image', __( 'Изображение' ) )
 							->set_width( 50 ),
 						Field::make( 'text', 'desc', __( 'Описание' ) )
-							->set_width( 33 )
+							->set_width( 50 )
 					] )
 			] )
 
@@ -159,6 +159,21 @@ Container::make( 'post_meta', __( 'Секции' ) )
 					->set_width( 33 ),
 				Field::make( 'text', 'form', __( 'Contact Form 7 шорткод' ) )
 					->set_width( 33 )
+			] )
+
+			// Persons section.
+			->add_fields( 'persons', __( 'Преподаватели' ), [
+				Field::make( 'text', 'title', __( 'Заголовок' ) )
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) ),
+				Field::make( 'complex', 'team', __( 'Преподаватели' ) )
+					->add_fields( [
+						Field::make( 'image', 'image', __( 'Фото' ) )
+							->set_width( 34 ),
+						Field::make( 'text', 'name', __( 'Имя' ) )
+							->set_width( 33 ),
+						Field::make( 'text', 'position', __( 'Должность' ) )
+							->set_width( 33 )
+					] )
 			] )
 	] );
 
