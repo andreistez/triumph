@@ -20,7 +20,8 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	showBurgerMenu()
 	initSwiper('.swiper-gallery', 'auto', 16, '.swiper-pagination')
 	initSwiper('.swiper-awards', 'auto', 28, '.awards-pagination')
-	initSwiperPag('.swiper-format', 'auto')
+	initSwiper('.swiper-persons', 'auto', 28, '.persons-pagination')
+	initSwiperPag('.swiper-format', 'auto', '.format-pagination')
 } )
 
 const showMaps = () => {
@@ -112,7 +113,7 @@ const initSwiper = (selector, view, gap, pag) => {
 	  })
 }
 
-const initSwiperPag = (selector, view) => {
+const initSwiperPag = (selector, view, pag) => {
 	const swiper = new Swiper(selector, {
 		slidesPerView: view,
 		spaceBetween: 16,
@@ -120,7 +121,7 @@ const initSwiperPag = (selector, view) => {
 		modules: [Pagination],
 		pagination: {
 			clickable: 1,
-		  	el: '.format-pagination',
+		  	el: pag,
 		},
 
 		breakpoints: {

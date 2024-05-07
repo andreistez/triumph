@@ -17,6 +17,7 @@ wp_enqueue_style( 'fc-steps', THEME_URI . '/static/css/sections/steps/steps.min.
 wp_enqueue_style( 'fc-club', THEME_URI . '/static/css/sections/club/club.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-awards', THEME_URI . '/static/css/sections/awards/awards.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-feedback', THEME_URI . '/static/css/sections/feedback/feedback.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'fc-persons', THEME_URI . '/static/css/sections/persons/persons.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'fc-hero', THEME_URI . '/static/js/hero/hero.min.js', [ 'jquery' ], THEME_VERSION, true );
 
 $sections = carbon_get_the_post_meta( 'page_sections' );
@@ -441,6 +442,65 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 					</div>
 					<div class="feedback-form">
 					 	<?php echo do_shortcode( '[contact-form-7 id="13def80" title="Запись на пробное занятие"]' ) ?>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="persons">
+			<div class="container">
+				<h2>Преподаватели</h2>
+				<div class="persons-wrapper">
+					<div class="swiper swiper-persons">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="person-img">
+									<img src="<?php echo THEME_URI ?>/static/img/p1.jpg" alt="">
+								</div>
+								<div class="person-name">Валентин Стогниенков</div>
+								<div class="person-position">Должность, Стаж</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="person-img">
+									<img src="<?php echo THEME_URI ?>/static/img/p2.jpg" alt="">
+								</div>
+								<div class="person-name">Валентин Стогниенков</div>
+								<div class="person-position">Должность, Стаж</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="person-img">
+									<img src="<?php echo THEME_URI ?>/static/img/p3.jpg" alt="">
+								</div>
+								<div class="person-name">Валентин Стогниенков</div>
+								<div class="person-position">Должность, Стаж</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="person-img">
+									<img src="<?php echo THEME_URI ?>/static/img/p4.jpg" alt="">
+								</div>
+								<div class="person-name">Валентин Стогниенков</div>
+								<div class="person-position">Должность, Стаж</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="person-img">
+									<img src="<?php echo THEME_URI ?>/static/img/p2.jpg" alt="">
+								</div>
+								<div class="person-name">Валентин Стогниенков</div>
+								<div class="person-position">Должность, Стаж</div>
+							</div>
+						</div>
+						<div class="persons-pagination"></div>
+					</div>
+					<div class="swiper-buttons">
+						<div class="swiper-prev">
+							<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18 7H2M2 7L7.80357 13M2 7L7.80357 1" stroke="#E53724" stroke-width="2"/>
+							</svg>
+						</div>
+						<div class="swiper-next">
+							<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18 7H2M2 7L7.80357 13M2 7L7.80357 1" stroke="#E53724" stroke-width="2"/>
+							</svg>
+						</div>
 					</div>
 				</div>
 			</div>
