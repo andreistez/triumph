@@ -148,5 +148,17 @@ Container::make( 'post_meta', __( 'Секции' ) )
 							->set_width( 33 )
 					] )
 			] )
+
+			// Feedback section.
+			->add_fields( 'feedback', __( 'Обратная связь' ), [
+				Field::make( 'text', 'title', __( 'Заголовок' ) )
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними, &lt;br&gt; для переноса строки.' ) )
+					->set_width( 34 ),
+				Field::make( 'textarea', 'desc', __( 'Описание' ) )
+					->set_rows( 4 )
+					->set_width( 33 ),
+				Field::make( 'text', 'form', __( 'Contact Form 7 шорткод' ) )
+					->set_width( 33 )
+			] )
 	] );
 
