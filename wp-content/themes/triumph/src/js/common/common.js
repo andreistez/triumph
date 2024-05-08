@@ -22,6 +22,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	initSwiper('.swiper-awards', 'auto', 28, '.awards-pagination')
 	initSwiper('.swiper-persons', 'auto', 28, '.persons-pagination')
 	initSwiperPag('.swiper-format', 'auto', '.format-pagination')
+	initSwiperPag('.swiper-payments', 'auto', '.payments-pagination')
 } )
 
 const showMaps = () => {

@@ -18,6 +18,7 @@ wp_enqueue_style( 'fc-club', THEME_URI . '/static/css/sections/club/club.min.css
 wp_enqueue_style( 'fc-awards', THEME_URI . '/static/css/sections/awards/awards.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-feedback', THEME_URI . '/static/css/sections/feedback/feedback.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-persons', THEME_URI . '/static/css/sections/persons/persons.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'fc-payments', THEME_URI . '/static/css/sections/payments/payments.min.css', [], THEME_VERSION );
 // wp_enqueue_script( 'fc-hero', THEME_URI . '/static/js/hero/hero.min.js', [ 'jquery' ], THEME_VERSION, true );
 
 $sections = carbon_get_the_post_meta( 'page_sections' );
@@ -502,6 +503,101 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 							</svg>
 						</div>
 					</div>
+				</div>
+			</div>
+		</section>
+		<section class="payments">
+			<div class="container">
+				<h2>У нас <span>гибкая система оплаты</span></h2>
+				<div class="payments-items">
+					<div class="swiper swiper-payments">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="payment">
+									<div class="payment-inner">
+										<div class="payment-img">
+											<svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_150_402)">
+												<path d="M11.0833 23.2734L21.0415 36.0568C21.9587 37.2375 24.0333 36.579 24.3172 35.1485C26.8286 22.9555 35.1489 14.4182 43.5565 6.17598C45.3909 4.35951 42.6175 1.47588 40.7831 3.29234C31.895 12.0341 23.1816 21.2072 20.5392 34.0814L23.8149 33.1731L13.8568 20.3898C12.2626 18.3463 9.48916 21.2526 11.0833 23.2734Z" fill="#5C3A84"/>
+												<path d="M34.952 2.95199C26.6099 -1.45293 15.5817 -0.953406 7.93834 4.60951C-2.54392 12.2386 -0.425626 30.1535 6.366 39.8716C13.5944 50.2254 29.4051 49.7259 39.2104 43.6634C49.0157 37.601 52.2477 19.8224 43.5562 11.1261C41.7436 9.3096 38.9484 12.1932 40.7827 14.0097C50.7191 23.9548 41.5252 40.0986 30.4315 42.8687C19.3378 45.6388 9.42333 41.5518 6.14762 29.4723C3.17765 18.5054 5.86373 6.33515 18.2241 4.33704C22.5917 3.63316 28.9902 4.35974 32.9866 6.47138C35.2359 7.65208 37.2231 4.13269 34.9738 2.95199H34.952Z" fill="#5C3A84"/>
+												</g>
+												<defs>
+												<clipPath id="clip0_150_402">
+												<rect width="48" height="48" fill="white" transform="translate(0.666504)"/>
+												</clipPath>
+												</defs>
+											</svg>
+										</div>
+										<h4>Оплата за занятие</h4>
+										<p>
+											Объединение акробатических элементов и элементы танца. На острие эмоций и в полной атмосфере праздника. 
+										</p>
+									</div>
+									<div class="payment-price">
+										от 2000 р./занятие
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="payment">
+									<div class="payment-inner">
+										<div class="payment-img">
+											<svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_150_403)">
+												<path d="M11.0833 23.2734L21.0415 36.0568C21.9587 37.2375 24.0333 36.579 24.3172 35.1485C26.8286 22.9555 35.1489 14.4182 43.5565 6.17598C45.3909 4.35951 42.6175 1.47588 40.7831 3.29234C31.895 12.0341 23.1816 21.2072 20.5392 34.0814L23.8149 33.1731L13.8568 20.3898C12.2626 18.3463 9.48916 21.2526 11.0833 23.2734Z" fill="#169796"/>
+												<path d="M34.952 2.95199C26.6099 -1.45293 15.5817 -0.953406 7.93834 4.60951C-2.54392 12.2386 -0.425626 30.1535 6.366 39.8716C13.5944 50.2254 29.4051 49.7259 39.2104 43.6634C49.0157 37.601 52.2477 19.8224 43.5562 11.1261C41.7436 9.3096 38.9484 12.1932 40.7827 14.0097C50.7191 23.9548 41.5252 40.0986 30.4315 42.8687C19.3378 45.6388 9.42333 41.5518 6.14762 29.4723C3.17765 18.5054 5.86373 6.33515 18.2241 4.33704C22.5917 3.63316 28.9902 4.35974 32.9866 6.47138C35.2359 7.65208 37.2231 4.13269 34.9738 2.95199H34.952Z" fill="#169796"/>
+												</g>
+												<defs>
+												<clipPath id="clip0_150_403">
+												<rect width="48" height="48" fill="white" transform="translate(0.666504)"/>
+												</clipPath>
+												</defs>
+											</svg>
+										</div>
+										<h4>Оплата за месяц</h4>
+										<p>
+											Здесь нужен текст поясняющий эту систему оплаты
+										</p>
+									</div>
+									<div class="payment-price">
+										от 8 000 р./в месяц
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="payment">
+									<div class="payment-inner">
+										<div class="payment-img">
+											<svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_150_404)">
+												<path d="M11.0833 23.2734L21.0415 36.0568C21.9587 37.2375 24.0333 36.579 24.3172 35.1485C26.8286 22.9555 35.1489 14.4182 43.5565 6.17598C45.3909 4.35951 42.6175 1.47588 40.7831 3.29234C31.895 12.0341 23.1816 21.2072 20.5392 34.0814L23.8149 33.1731L13.8568 20.3898C12.2626 18.3463 9.48916 21.2526 11.0833 23.2734Z" fill="#E53724"/>
+												<path d="M34.952 2.95199C26.6099 -1.45293 15.5817 -0.953406 7.93834 4.60951C-2.54392 12.2386 -0.425626 30.1535 6.366 39.8716C13.5944 50.2254 29.4051 49.7259 39.2104 43.6634C49.0157 37.601 52.2477 19.8224 43.5562 11.1261C41.7436 9.3096 38.9484 12.1932 40.7827 14.0097C50.7191 23.9548 41.5252 40.0986 30.4315 42.8687C19.3378 45.6388 9.42333 41.5518 6.14762 29.4723C3.17765 18.5054 5.86373 6.33515 18.2241 4.33704C22.5917 3.63316 28.9902 4.35974 32.9866 6.47138C35.2359 7.65208 37.2231 4.13269 34.9738 2.95199H34.952Z" fill="#E53724"/>
+												</g>
+												<defs>
+												<clipPath id="clip0_150_404">
+												<rect width="48" height="48" fill="white" transform="translate(0.666504)"/>
+												</clipPath>
+												</defs>
+											</svg>
+										</div>
+										<h4>Абонемент</h4>
+										<p>
+											Выдаётся на определенное количество занятий (10, 20, 40). Чем больше занятий, тем меньше цена за 1 занятие
+										</p>
+									</div>
+									<div class="payment-price">
+										от 1700 р./занятие
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="payments-pagination"></div>
+					</div>
+				</div>
+				<div class="button-wrapper">
+					<button class="button bg-red after">
+						Получить консультацию
+					</button>
 				</div>
 			</div>
 		</section>
