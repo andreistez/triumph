@@ -27,7 +27,7 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 ?>
 
 	<main class="main">
-		<section class="hero">
+		<!-- <section class="hero">
 			<div class="container">
 				<div class="hero-wrapper">
 					<div class="hero-info">
@@ -763,7 +763,7 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<?php
 		while( have_posts() ){
