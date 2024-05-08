@@ -197,7 +197,20 @@ Container::make( 'post_meta', __( 'Секции' ) )
 						Field::make( 'color', 'bg_color', 'Цвет фона' )
 							->set_width( 50 ),
 						Field::make( 'color', 'title_color', 'Цвет заголовка' )
-							->set_width( 50 ),
+							->set_width( 50 )
+					] )
+			] )
+
+			// FAQ section.
+			->add_fields( 'faq', __( 'Вопросы и ответы' ), [
+				Field::make( 'text', 'title', __( 'Заголовок' ) )
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) ),
+				Field::make( 'complex', 'items', __( 'Элементы' ) )
+					->add_fields( [
+						Field::make( 'text', 'question', __( 'Вопрос' ) )
+							->set_width( 30 ),
+						Field::make( 'rich_text', 'answer', __( 'Ответ' ) )
+							->set_width( 70 )
 					] )
 			] )
 	] );
