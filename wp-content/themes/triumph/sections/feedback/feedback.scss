@@ -239,7 +239,7 @@
 		}
 
 		& input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
-			font-size: 15px;
+			background-size: 12px;
 		}	
 
 		.wpcf7-form-control-wrap {
@@ -262,11 +262,11 @@
 					align-items: center;
 
 					&::before {
+						content: "";
 						position: absolute;
 						left: 0;
 						top: 50%;
 						transform: translateY(-50%);
-						content: "✓";
 						display: flex;
 						justify-content: center;
 						align-items: center;
@@ -278,8 +278,12 @@
 						margin-right: 8px;
 						border-radius: 100%;
 						color: $c-red;
-						transition: font-size ease $tr;
+						transition: background-size ease $tr;
 						cursor: pointer;
+						background-image: url('../../../../static/img/check.svg');
+						background-size: 0;
+						background-repeat: no-repeat;
+						background-position: center;
 					}
 				}
 			}
