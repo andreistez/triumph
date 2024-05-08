@@ -89,6 +89,7 @@
 			right: -80px;
 			top: 120%;
 			transform: rotate(90deg);
+			z-index: 10;
 
 			@media (min-width: $md) {
 				right: auto;
