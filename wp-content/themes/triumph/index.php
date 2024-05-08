@@ -419,12 +419,12 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 						</div>
 						<div class="awards-pagination"></div>
 					</div>
-					<div class="swiper-prev">
+					<div class="awards-prev">
 							<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M18 7H2M2 7L7.80357 13M2 7L7.80357 1" stroke="#E53724" stroke-width="2"/>
 							</svg>
 						</div>
-						<div class="swiper-next">
+						<div class="awards-next">
 							<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M18 7H2M2 7L7.80357 13M2 7L7.80357 1" stroke="#E53724" stroke-width="2"/>
 							</svg>
@@ -494,12 +494,12 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 						<div class="persons-pagination"></div>
 					</div>
 					<div class="swiper-buttons">
-						<div class="swiper-prev">
+						<div class="persons-prev">
 							<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M18 7H2M2 7L7.80357 13M2 7L7.80357 1" stroke="#E53724" stroke-width="2"/>
 							</svg>
 						</div>
-						<div class="swiper-next">
+						<div class="persons-next">
 							<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M18 7H2M2 7L7.80357 13M2 7L7.80357 1" stroke="#E53724" stroke-width="2"/>
 							</svg>

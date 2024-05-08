@@ -46,7 +46,7 @@
 			}
 		}
 
-		.swiper-next, .swiper-prev {
+		.awards-next, .awards-prev {
 			position: absolute;
 			top: 40%;
 			display: none;
@@ -57,12 +57,12 @@
 			}
 		}
 
-		.swiper-next {
+		.awards-next {
 			right: 0;
 			transform: translateY(-50%) rotate(180deg);
 		}
 
-		.swiper-prev {
+		.awards-prev {
 			left: 0;
 		}
 	}

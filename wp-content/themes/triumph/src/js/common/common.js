@@ -18,9 +18,9 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 	showMaps()
 	showBurgerMenu()
-	initSwiper('.swiper-gallery', 'auto', 16, '.swiper-pagination')
-	initSwiper('.swiper-awards', 'auto', 28, '.awards-pagination')
-	initSwiper('.swiper-persons', 'auto', 28, '.persons-pagination')
+	initSwiper('.swiper-gallery', 'auto', 16, '.swiper-pagination', '.swiper-next', '.swiper-prev')
+	initSwiper('.swiper-awards', 'auto', 28, '.awards-pagination', '.awards-next', '.awards-prev')
+	initSwiper('.swiper-persons', 'auto', 28, '.persons-pagination', '.persons-next', '.persons-prev')
 	initSwiperPag('.swiper-format', 'auto', '.format-pagination')
 	initSwiperPag('.swiper-payments', 'auto', '.payments-pagination')
 } )
@@ -96,7 +96,7 @@ const loadYTVideo = () => {
 	} )
 }
 
-const initSwiper = (selector, view, gap, pag) => {
+const initSwiper = (selector, view, gap, pag, next, prev) => {
 	const swiper = new Swiper(selector, {
 		slidesPerView: view,
 		spaceBetween: gap,
@@ -108,8 +108,8 @@ const initSwiper = (selector, view, gap, pag) => {
 		},
 
 		navigation: {
-		  nextEl: '.swiper-next',
-		  prevEl: '.swiper-prev',
+		  nextEl: next,
+		  prevEl: prev,
 		}
 	  })
 }

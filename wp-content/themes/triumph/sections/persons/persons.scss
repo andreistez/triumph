@@ -51,7 +51,7 @@
 		}
 	}
 
-	.swiper-next, .swiper-prev {
+	.persons-next, .persons-prev {
 		position: absolute;
 		top: 42%;
 		transform: translateY(-50%);
@@ -63,12 +63,12 @@
 		}
 	}
 
-	.swiper-next {
+	.persons-next {
 		right: 0px;
 		transform: translateY(-50%) rotate(-180deg);
 	}
 
-	.swiper-prev {
+	.persons-prev {
 		left: 0;
 	}
 
