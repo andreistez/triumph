@@ -151,6 +151,8 @@ Container::make( 'post_meta', __( 'Секции' ) )
 
 			// Feedback section.
 			->add_fields( 'feedback', __( 'Обратная связь' ), [
+				Field::make( 'select', 'type', __( 'Тип' ) )
+					->add_options( ['standard' => 'Стандартный', 'consultation' => 'Консультация'] ),
 				Field::make( 'text', 'title', __( 'Заголовок' ) )
 					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними, &lt;br&gt; для переноса строки.' ) )
 					->set_width( 34 ),

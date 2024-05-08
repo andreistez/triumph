@@ -13,6 +13,7 @@ if( ! $section = $args['section'] ?? null ) return;
 
 wp_enqueue_style( 'fc-feedback', THEME_URI . '/static/css/sections/feedback/feedback.min.css', [], THEME_VERSION );
 
+$type  = $section['type'] ?? 'standard';
 $title = $section['title'] ?? '';
 $title = $title ? str_replace( ['[color]', '[/color]'], ['<span>', '</span>'], $title ) : '';
 $desc  = $section['desc'] ?? '';
@@ -21,7 +22,7 @@ $form  = $section['form'] ?? '';
 if( ! $title && ! $desc && ! $form ) return;
 ?>
 
-<section class="feedback">
+<section class="feedback <?php echo esc_attr( $type ) ?>">
 	<div class="container">
 		<div class="feedback-wrapper">
 			<div class="feedback-info">
