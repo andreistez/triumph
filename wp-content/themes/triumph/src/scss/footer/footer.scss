@@ -1,1 +1,29 @@
-// Footer common styles.
+.footer {
+	padding: 20px 0;
+
+	@media (min-width: $md) {
+		padding: 28px 40px;
+	}
+
+	&-wrapper {
+		display: flex;
+		align-items: center;
+
+		a {
+			margin-right: 10px;
+
+			@media (min-width: $md) {
+				margin-right: 20px;
+			}
+	
+			img {
+				width: auto;
+				height: 40px;
+			}
+		}
+
+		p {
+			@include text();
+		}
+	}
+}
