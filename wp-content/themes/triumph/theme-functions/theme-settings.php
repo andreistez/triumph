@@ -30,6 +30,10 @@ function crb_attach_theme_options(): void
 					Field::make( 'image', 'icon', __( 'Иконка' ) )
 						->set_width( 50 ),
 				] ),
+		] )
+
+		->add_tab( __( 'Яндекс' ), [
+			Field::make( 'text', 'yandex_maps_api_key', 'API ключ для карты Яндекс' )
 		] );
 }
 

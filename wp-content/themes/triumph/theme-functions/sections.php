@@ -213,5 +213,31 @@ Container::make( 'post_meta', __( 'Секции' ) )
 							->set_width( 70 )
 					] )
 			] )
+
+			// Contact section.
+			->add_fields( 'contact', __( 'Контакты' ), [
+				Field::make( 'text', 'title', __( 'Заголовок' ) )
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) ),
+				Field::make( 'text', 'worktime_title', __( 'Заголовок графика работы' ) )
+					->set_width( 50 ),
+				Field::make( 'text', 'worktime', __( 'График работы' ) )
+					->set_width( 50 ),
+				Field::make( 'complex', 'addresses', __( 'Адреса' ) )
+					->add_fields( [
+						Field::make( 'text', 'address', __( 'Адрес' ) )
+							->set_width( 50 ),
+						Field::make( 'text', 'address_desc', __( 'Описание' ) )
+							->set_width( 50 )
+					] ),
+				Field::make( 'text', 'links_title', __( 'Заголовок ссылок' ) )
+					->set_width( 30 ),
+				Field::make( 'complex', 'links', __( 'Ссылки' ) )
+					->add_fields( [
+						Field::make( 'image', 'icon', __( 'Иконка' ) )
+							->set_width( 50 ),
+						Field::make( 'text', 'url', __( 'Ссылка' ) )
+							->set_width( 50 )
+					] ),
+			] )
 	] );
 
