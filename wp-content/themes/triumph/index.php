@@ -19,7 +19,8 @@ wp_enqueue_style( 'fc-awards', THEME_URI . '/static/css/sections/awards/awards.m
 wp_enqueue_style( 'fc-feedback', THEME_URI . '/static/css/sections/feedback/feedback.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-persons', THEME_URI . '/static/css/sections/persons/persons.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-payments', THEME_URI . '/static/css/sections/payments/payments.min.css', [], THEME_VERSION );
-// wp_enqueue_script( 'fc-hero', THEME_URI . '/static/js/hero/hero.min.js', [ 'jquery' ], THEME_VERSION, true );
+wp_enqueue_style( 'fc-faq', THEME_URI . '/static/css/sections/faq/faq.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'fc-faq', THEME_URI . '/static/js/faq/faq.min.js', [ 'jquery' ], THEME_VERSION, true );
 
 $sections = carbon_get_the_post_meta( 'page_sections' );
 ?>
@@ -598,6 +599,98 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 					<button class="button bg-red after">
 						Получить консультацию
 					</button>
+				</div>
+			</div>
+		</section>
+		<section class="faq">
+			<div class="container">
+				<h2>Часто-задаваемые <span>вопросы</span></h2>
+				<div class="dropdowns">
+					<div class="dropdown">
+						<button class="dropdown-button">
+							<div class="dropdown-button-ico">
+								<img src="<?php echo THEME_URI ?>/static/img/dropdown.svg" alt="">
+							</div>
+						</button>
+						<div class="dropdown-box">
+							<h4>Часто-задаваемый вопрос</h4>
+							<div class="dropdown-open">
+								<div class="dropdown-inner">
+									<p>
+										Разнообразный и богатый опыт говорит нам, что курс на социально-ориентированный национальный проект требует от нас анализа новых предложений. Вот вам яркий пример современных тенденций — семантический разбор внешних противодействий представляет собой интересный эксперимент проверки стандартных подходов.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown">
+						<button class="dropdown-button">
+							<div class="dropdown-button-ico">
+								<img src="<?php echo THEME_URI ?>/static/img/dropdown.svg" alt="">
+							</div>
+						</button>
+						<div class="dropdown-box">
+							<h4>Часто-задаваемый вопрос</h4>
+							<div class="dropdown-open">
+								<div class="dropdown-inner">
+									<p>
+										Разнообразный и богатый опыт говорит нам, что курс на социально-ориентированный национальный проект требует от нас анализа новых предложений. Вот вам яркий пример современных тенденций — семантический разбор внешних противодействий представляет собой интересный эксперимент проверки стандартных подходов.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown">
+						<button class="dropdown-button">
+							<div class="dropdown-button-ico">
+								<img src="<?php echo THEME_URI ?>/static/img/dropdown.svg" alt="">
+							</div>
+						</button>
+						<div class="dropdown-box">
+							<h4>Часто-задаваемый вопрос</h4>
+							<div class="dropdown-open">
+								<div class="dropdown-inner">
+									<p>
+										Разнообразный и богатый опыт говорит нам, что курс на социально-ориентированный национальный проект требует от нас анализа новых предложений. Вот вам яркий пример современных тенденций — семантический разбор внешних противодействий представляет собой интересный эксперимент проверки стандартных подходов.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown">
+						<button class="dropdown-button">
+							<div class="dropdown-button-ico">
+								<img src="<?php echo THEME_URI ?>/static/img/dropdown.svg" alt="">
+							</div>
+						</button>
+						<div class="dropdown-box">
+							<h4>Часто-задаваемый вопрос</h4>
+							<div class="dropdown-open">
+								<div class="dropdown-inner">
+									<p>
+										Разнообразный и богатый опыт говорит нам, что курс на социально-ориентированный национальный проект требует от нас анализа новых предложений. Вот вам яркий пример современных тенденций — семантический разбор внешних противодействий представляет собой интересный эксперимент проверки стандартных подходов.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dropdown">
+						<button class="dropdown-button">
+							<div class="dropdown-button-ico">
+								<img src="<?php echo THEME_URI ?>/static/img/dropdown.svg" alt="">
+							</div>
+						</button>
+						<div class="dropdown-box">
+							<h4>Часто-задаваемый вопрос</h4>
+							<div class="dropdown-open">
+								<div class="dropdown-inner">
+									<p>
+										Разнообразный и богатый опыт говорит нам, что курс на социально-ориентированный национальный проект требует от нас анализа новых предложений. Вот вам яркий пример современных тенденций — семантический разбор внешних противодействий представляет собой интересный эксперимент проверки стандартных подходов.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

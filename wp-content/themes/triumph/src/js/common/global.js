@@ -76,3 +76,12 @@ export const outerClose = (selector) => {
         outside ? wrapper.classList.remove('opened') : null
     })
 }
+
+export const reCalculateDropdownHeight = dropdown => {
+    const dropdownOpen  = dropdown.querySelector( '.dropdown-open' ),
+        dropdownInner   = dropdown.querySelector( '.dropdown-inner' )
+
+    if (! dropdownOpen || ! dropdownInner) return
+
+    dropdownOpen.style.height = `${ dropdownInner.getBoundingClientRect().height }px`
+}
