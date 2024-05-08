@@ -18,10 +18,15 @@
 	&-wrapper {
 		display: flex;
 		flex-direction: column-reverse;
-		gap: 28px;
+		gap: 20px;
 
 		@media (min-width: $md) {
+			gap: 16px;
 			flex-direction: row;
+		}
+
+		@media (min-width: $lg) {
+			gap: 28px;
 		}
 
 		h2 {
@@ -86,7 +91,7 @@
 			flex-direction: column;
 			align-items: flex-start;
 			position: relative;
-			padding-right: 30px;
+			padding-right: 25px;
 
 			&::after {
 				content: '';

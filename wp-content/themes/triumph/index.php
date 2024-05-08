@@ -747,6 +747,23 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 				</div>
 			</div>
 		</section>
+		<section class="feedback consultation">
+			<div class="container">
+				<div class="feedback-wrapper">
+					<div class="feedback-info">
+						<h2>
+							Если у вас <span>остались вопросы</span> напишите нам и мы с радостью на них ответим
+						</h2>
+						<p>
+							Обычно мы перезваниваем в течение 2х часов
+						</p>
+					</div>
+					<div class="feedback-form">
+					 	<?php echo do_shortcode( '[contact-form-7 id="913835f" title="Получить консультацию"]' ) ?>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<?php
 		while( have_posts() ){
