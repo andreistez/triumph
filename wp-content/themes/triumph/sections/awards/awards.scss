@@ -39,6 +39,11 @@
 			img {
 				width: 100%;
 				border-radius: $border28;
+
+				@media (min-width: $md) {
+					height: 360px;
+					object-fit: cover;
+				}
 			}
 
 			@media (min-width: $sm) {
