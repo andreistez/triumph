@@ -98,10 +98,6 @@ function critick_inclusion_enqueue(): void
 	wp_enqueue_style( 'main', THEME_URI . '/static/css/main.min.css', [], THEME_VERSION );
 	wp_enqueue_script( 'main', THEME_URI . '/static/js/main.min.js', [], THEME_VERSION, true );
 
-	// Yandex Maps API.
-	if( $api_key = carbon_get_theme_option( 'yandex_maps_api_key' ) ?? '' )
-		wp_enqueue_script( 'yandex-maps', "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=$api_key", [], THEME_VERSION, true );
-
 	/**
 	 * Additional pages styles & scripts below:
 	 */

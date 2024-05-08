@@ -13,6 +13,10 @@ if( ! $section = $args['section'] ?? null ) return;
 
 wp_enqueue_style( 'fc-contact', THEME_URI . '/static/css/sections/contact/contact.min.css', [], THEME_VERSION );
 
+// Yandex Maps API.
+if( $api_key = carbon_get_theme_option( 'yandex_maps_api_key' ) ?? '' )
+	wp_enqueue_script( 'yandex-maps', "https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=$api_key", [], THEME_VERSION, true );
+
 $title          = $section['title'] ?? '';
 $title          = $title ? str_replace( ['[color]', '[/color]'], ['<span>', '</span>'], $title ) : '';
 $addresses      = $section['addresses'] ?? [];
