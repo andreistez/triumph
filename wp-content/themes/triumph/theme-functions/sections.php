@@ -175,5 +175,30 @@ Container::make( 'post_meta', __( 'Секции' ) )
 							->set_width( 33 )
 					] )
 			] )
+
+			// Payments section.
+			->add_fields( 'payments', __( 'Оплата' ), [
+				Field::make( 'text', 'title', __( 'Заголовок' ) )
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) )
+					->set_width( 50 ),
+				Field::make( 'text', 'button_label', __( 'Текст кнопки' ) )
+					->set_width( 50 ),
+				Field::make( 'complex', 'items', __( 'Элементы' ) )
+					->add_fields( [
+						Field::make( 'image', 'icon', __( 'Иконка' ) )
+							->set_width( 25 ),
+						Field::make( 'text', 'title', __( 'Заголовок' ) )
+							->set_width( 25 ),
+						Field::make( 'textarea', 'desc', __( 'Описание' ) )
+							->set_rows( 4 )
+							->set_width( 25 ),
+						Field::make( 'text', 'price', __( 'Цена' ) )
+							->set_width( 25 ),
+						Field::make( 'color', 'bg_color', 'Цвет фона' )
+							->set_width( 50 ),
+						Field::make( 'color', 'title_color', 'Цвет заголовка' )
+							->set_width( 50 ),
+					] )
+			] )
 	] );
 
