@@ -7,6 +7,7 @@ add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 function crb_attach_theme_options(): void
 {
 	Container::make( 'theme_options', __( 'Настройки темы' ) )
+		// Header tab.
 		->add_tab( __( 'Хедер' ), [
 			Field::make( 'image', 'logo', 'Логотип' )
 				->set_width( 34 ),
@@ -32,6 +33,17 @@ function crb_attach_theme_options(): void
 				] ),
 		] )
 
+		// Footer tab.
+		->add_tab( __( 'Футер' ), [
+			Field::make( 'image', 'footer_logo', 'Логотип' )
+				->set_width( 50 ),
+			Field::make( 'textarea', 'footer_desc', 'Описание' )
+				->set_width( 50 )
+				->set_rows( 3 )
+				->set_help_text( __( 'Используйте &lt;br&gt; для переноса строки.' ) )
+		] )
+
+		// Yandex tab.
 		->add_tab( __( 'Яндекс' ), [
 			Field::make( 'text', 'yandex_maps_api_key', 'API ключ для карты Яндекс' )
 		] );

@@ -8,11 +8,11 @@
  */
 
 global $page, $paged;
-$site_description     = get_bloginfo( 'description', 'display' );
-$logo                 = carbon_get_theme_option( 'logo' ) ?? null;
-$working_time         = carbon_get_theme_option( 'working_time' ) ?? '';
-$phone                = carbon_get_theme_option( 'phone' ) ?? '';
-$phone_cleaned        = crit_clean_phone( $phone );
+$site_description = get_bloginfo( 'description', 'display' );
+$logo             = carbon_get_theme_option( 'logo' ) ?? null;
+$working_time     = carbon_get_theme_option( 'working_time' ) ?? '';
+$phone            = carbon_get_theme_option( 'phone' ) ?? '';
+$phone_cleaned    = crit_clean_phone( $phone );
 ?>
 
 <!doctype html>
@@ -65,7 +65,9 @@ $phone_cleaned        = crit_clean_phone( $phone );
 					<?php
 					if( $logo ){
 						echo '<a href="' . get_bloginfo( 'url' ) . '" class="header-logo">';
-						get_template_part( 'components/image', null, ['data' => crit_prepare_image_data( $logo, 'logo' )] );
+						get_template_part( 'components/image', null, [
+							'data' => crit_prepare_image_data( $logo, 'logo' )
+						] );
 						echo '</a>';
 					}
 					?>
@@ -103,7 +105,7 @@ $phone_cleaned        = crit_clean_phone( $phone );
 					<?php
 					wp_nav_menu( [
 						'theme_location'  => 'header_menu',
-						'container'		  => 'nav',
+						'container'       => 'nav',
 						'container_class' => 'header-nav'
 					] );
 					?>
@@ -115,8 +117,7 @@ $phone_cleaned        = crit_clean_phone( $phone );
 							</div>
 
 							<?php
-							if( $working_time )
-								echo '<div class="header-worktime mobile"><p>', $working_time, '</p></div>';
+							if( $working_time ) echo '<div class="header-worktime mobile"><p>', $working_time, '</p></div>';
 							?>
 						</div>
 
