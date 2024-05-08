@@ -21,6 +21,7 @@ wp_enqueue_style( 'fc-persons', THEME_URI . '/static/css/sections/persons/person
 wp_enqueue_style( 'fc-payments', THEME_URI . '/static/css/sections/payments/payments.min.css', [], THEME_VERSION );
 wp_enqueue_style( 'fc-faq', THEME_URI . '/static/css/sections/faq/faq.min.css', [], THEME_VERSION );
 wp_enqueue_script( 'fc-faq', THEME_URI . '/static/js/faq/faq.min.js', [ 'jquery' ], THEME_VERSION, true );
+wp_enqueue_style( 'fc-contact', THEME_URI . '/static/css/sections/contact/contact.min.css', [], THEME_VERSION );
 
 $sections = carbon_get_the_post_meta( 'page_sections' );
 ?>
@@ -691,6 +692,58 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contact">
+			<div class="container">
+				<div class="contact-wrapper">
+					<div class="contact-info">
+						<h2>Контакты</h2>
+						<div class="contact-buttons">
+							<button class="contact-button active">
+								<div class="contact-button-inner">
+									<address>г. Москва, ш. Энтузиастов, 33</address>
+									<div class="address-desc">Основной адрес</div>
+								</div>
+							</button>
+							<button class="contact-button">
+								<div class="contact-button-inner">
+									<address>г. Москва, Покровка, 10с5</address>
+									<div class="address-desc">Филиал</div>
+								</div>
+							</button>
+							<button class="contact-button">
+								<div class="contact-button-inner">
+									<address>г. Москва, Измайловский проспект, 53</address>
+									<div class="address-desc">Филиал</div>
+								</div>
+							</button>
+						</div>
+						<div class="contact-worktime">
+							<p>
+								Время работы: 
+							</p>
+							<p>
+								пн-вс, 10:00-21:00
+							</p>
+						</div>
+						<div class="contact-links">
+							<p>Телефон для связи:</p>
+							<div class="contact-links-wrapper">
+								<a class="social-link" href="#">
+									<img src="<?php echo THEME_URI ?>/static/img/whatsapp.svg" alt="">
+								</a>
+								<a class="social-link" href="#">
+									<img src="<?php echo THEME_URI ?>/static/img/telegram.svg" alt="">
+								</a>
+								<a class="contact-phone" href="tel:79161326468">
+									+7 (916) 132-64-68
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="contact-map"></div>
 				</div>
 			</div>
 		</section>
