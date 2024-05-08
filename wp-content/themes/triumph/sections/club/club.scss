@@ -46,14 +46,18 @@
 
 	&-video {
 		width: 100%;
-		height: 320px;
-
-		@media (min-width: $md) {
-			height: 400px;
-		}
-
+		
 		@media (min-width: $xl) {
 			width: calc(50% - 14px);
+		}
+
+		.yt-lazy, video {
+			height: 320px;
+
+			@media (min-width: $md) {
+				height: 400px;
+			}
+	
 		}
 
 		&-desc {
