@@ -46,6 +46,14 @@ function crb_attach_theme_options(): void
 		// Yandex tab.
 		->add_tab( __( 'Яндекс' ), [
 			Field::make( 'text', 'yandex_maps_api_key', 'API ключ для карты Яндекс' )
+		] )
+
+		// Forms tab.
+		->add_tab( __( 'Формы' ), [
+			Field::make( 'text', 'form_lesson', 'CF7 шорткод формы пробного занятия' )
+				->set_width( 50 ),
+			Field::make( 'text', 'form_consultation', 'CF7 шорткод формы консультации' )
+				->set_width( 50 )
 		] );
 }
 

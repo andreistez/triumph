@@ -181,8 +181,7 @@ const callModal = ( btn, selector, lock) => {
 
 const closeModal = ( modal ) => {
 	modal.classList.add( 'closed' )
-	setTimeout( () => modal.classList.remove( 'opened' ), 350 )
-	setTimeout( () => modal.classList.remove( 'closed' ), 350 )
+	setTimeout( () => modal.classList.remove( 'opened', 'closed' ), 350 )
 	enableBodyScroll( getTargetElement() )
 }
 
