@@ -28,7 +28,19 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 	callModal( '.modal-lesson', '#modal-lesson', '#modal-lesson' )
 	callModal( '.modal-consultation', '#modal-consultation', '#modal-consultation' )
+
+	setIDforSections()
 } )
+
+const setIDforSections = () => {
+	const sections = document.querySelectorAll('section')
+	console.log(sections)
+	sections.forEach((section, index) => {
+		const sectionName = section.className
+		const id = sectionName + '-' + (index + 1)
+		section.setAttribute('id', id)
+	})
+}
 
 const showMaps = () => {
 	const wrappers = document.querySelectorAll( '.addresses' )
@@ -155,6 +167,7 @@ const callModal = ( btn, selector, lock ) => {
 	const buttons = document.querySelectorAll( btn )
 	const modal = document.querySelector( selector )
 	const closeBtn = modal.querySelector('.close')
+	const closeResp = modal.querySelector('.close-resp')
 
 	if( ! buttons.length && ! modal ) return;
 
@@ -174,6 +187,15 @@ const callModal = ( btn, selector, lock ) => {
 	} )
 
 	closeBtn.addEventListener('click', () => {
+		modal.classList.add( 'closed' )
+		enableBodyScroll( modal )
+		setTimeout( () => {
+			modal.classList.remove( 'opened', 'closed' )
+			enableBodyScroll( modal )
+		}, 350 )
+	})
+
+	closeResp.addEventListener('click', () => {
 		modal.classList.add( 'closed' )
 		enableBodyScroll( modal )
 		setTimeout( () => {
