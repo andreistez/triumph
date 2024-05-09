@@ -36,6 +36,7 @@ if( $form_lesson ){
 	?>
 	<div class="modal-wrapper" id="modal-lesson">
 		<div class="modal">
+			<button class="close"><span></span></button>
 			<?php echo do_shortcode( $form_lesson ) ?>
 		</div>
 	</div>
@@ -46,6 +47,7 @@ if( $form_consultation ){
 	?>
 	<div class="modal-wrapper" id="modal-consultation">
 		<div class="modal">
+			<button class="close"><span></span></button>
 			<?php echo do_shortcode( $form_consultation ) ?>
 		</div>
 	</div>

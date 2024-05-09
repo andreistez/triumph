@@ -154,7 +154,7 @@ const initSwiperPag = ( selector, view, pag ) => {
 const callModal = ( btn, selector, lock ) => {
 	const buttons = document.querySelectorAll( btn )
 	const modal = document.querySelector( selector )
-	// const closeBtns = document.querySelectorAll( '.close' )
+	const closeBtn = modal.querySelector('.close')
 
 	if( ! buttons.length && ! modal ) return;
 
@@ -167,24 +167,26 @@ const callModal = ( btn, selector, lock ) => {
 		} )
 	} )
 
-	/*closeBtns.forEach( closeBtn => {
-		closeBtn.addEventListener( 'click', () => {
-			closeModal( modal )
-		} )
-	} )*/
-
 	modal.addEventListener( 'click', e => {
 		if( e.target === modal ){
 			closeModal( modal )
 		}
 	} )
+
+	closeBtn.addEventListener('click', () => {
+		modal.classList.add( 'closed' )
+		enableBodyScroll( modal )
+		setTimeout( () => {
+			modal.classList.remove( 'opened', 'closed' )
+			enableBodyScroll( modal )
+		}, 350 )
+	})
 }
 
 const closeModal = ( modal ) => {
 	modal.classList.add( 'closed' )
+	enableBodyScroll( modal )
 	setTimeout( () => {
 		modal.classList.remove( 'opened', 'closed' )
-		enableBodyScroll( modal )
 	}, 350 )
 }
-
