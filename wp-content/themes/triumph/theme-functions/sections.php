@@ -7,8 +7,6 @@ Container::make( 'post_meta', __( 'Секции' ) )
 	->where( 'post_type', '=', 'page' )
 	->add_fields( [
 		Field::make( 'complex', 'page_sections', __( 'Содержимое' ) )
-			->set_layout( 'tabbed-horizontal' )
-
 			// Hero section.
 			->add_fields( 'hero', __( 'Главная секция' ), [
 				Field::make( 'text', 'title', __( 'Заголовок' ) )
