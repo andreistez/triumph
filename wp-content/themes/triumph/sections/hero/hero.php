@@ -12,7 +12,6 @@
 if( ! $section = $args['section'] ?? null ) return;
 
 wp_enqueue_style( 'fc-hero', THEME_URI . '/static/css/sections/hero/hero.min.css', [], THEME_VERSION );
-wp_enqueue_script( 'fc-hero', THEME_URI . '/static/js/hero/hero.min.js', ['jquery'], THEME_VERSION, true );
 
 $title        = $section['title'] ?? '';
 $title        = $title ? str_replace( ['[color]', '[/color]'], ['<span>', '</span>'], $title ) : '';
@@ -56,7 +55,7 @@ $video        = $section['video'] ?? null;
 					echo '</div>';
 				}
 
-				if( $button_label ) echo '<button class="button after-red">', esc_html( $button_label ), '</button>';
+				if( $button_label ) echo '<button class="button after-red modal-lesson">', esc_html( $button_label ), '</button>';
 				?>
 			</div>
 

@@ -1,0 +1,161 @@
+.modal-wrapper {
+	position:fixed;
+	display:none;
+	align-items:center;
+	justify-content:center;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	z-index: 200;
+	overflow-y: auto;
+	padding: 20px;
+	background-color: #1C1B1780;
+
+	.modal {
+		width: 100%;
+		max-width: 793px;
+		margin: auto 0;
+	}
+
+	&.opened {
+		display: flex;
+		animation: show 1s forwards;
+
+		.modal {
+			animation: show 1s forwards;
+
+			@keyframes show {
+				0% {
+					display: none;
+					opacity: 0;
+				}
+	
+				1% {
+					display: flex;
+				}
+	
+				100% {
+					opacity: 1;
+				}
+			}
+		}
+
+		@keyframes show {
+			0% {
+				display: none;
+				opacity: 0;
+			}
+
+			1% {
+				display: flex;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+
+	&.closed {
+		animation: fade $tr forwards ease;
+	
+		@keyframes fade {
+			0% {
+				opacity: 1;
+			}
+
+			100% {
+				opacity: 0;
+			}
+		}
+
+		.modal {
+			animation: close $tr forwards ease;
+
+			@keyframes close {
+				0% {
+					transform: translateX(0);
+				}
+
+				100% {
+					transform: translateX(100%);
+				}
+			}
+		}
+	}
+
+	form {
+		position: relative;
+		padding: 20px;
+
+		@media (min-width: $md) {
+			padding: 80px;
+		}
+	}
+
+	.wpcf7 legend {
+		font-family: $ff-title;
+		font-size: 56px;
+		font-weight: 400;
+		line-height: 64px;
+		text-align: left;
+	}
+
+	&#modal-consultation {
+		.checkbox-wrapper {
+			margin-top: 28px;
+		}
+	}
+
+	&#modal-lesson {
+		.inputs {
+			@media (min-width: $sm) {
+				flex-direction: row;
+			}
+		}
+	}
+}
+
+.close {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background-color: transparent;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	transition: opacity ease $tr;
+	z-index: 10;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 2px;
+		height: 100%;
+		height: 100%;
+		left: 50%;
+		top: 0;
+		background-color: $c-white;
+		transform: rotate(45deg);
+		
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 2px;
+		height: 100%;
+		height: 100%;
+		left: 50%;
+		top: 0;
+		background-color: $c-white;
+		transform: rotate(-45deg);
+	}
+
+	&:hover {
+		opacity: $op;
+	}
+}

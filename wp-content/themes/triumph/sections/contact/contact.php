@@ -44,13 +44,13 @@ $phone          = carbon_get_theme_option( 'phone' ) ?? '';
 						if( ! $address && ! $desc ) continue;
 						?>
 						<button class="contact-button<?php echo $key === 0 ? ' active' : '' ?>">
-							<div class="contact-button-inner">
+							<span class="contact-button-inner">
 								<?php
 								if( $address ) echo '<address>', $address, '</address>';
 
 								if( $desc ) echo '<div class="address-desc">', esc_html( $desc ), '</div>';
 								?>
-							</div>
+							</span>
 						</button>
 						<?php
 					}

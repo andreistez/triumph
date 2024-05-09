@@ -1,7 +1,8 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination} from 'swiper/modules';
 import { close } from "./global"
-import { outerClose } from "./global"
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
+import { setTargetElement, getTargetElement } from './global'
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
@@ -23,6 +24,8 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	initSwiper('.swiper-persons', 'auto', 28, '.persons-pagination', '.persons-next', '.persons-prev')
 	initSwiperPag('.swiper-format', 'auto', '.format-pagination')
 	initSwiperPag('.swiper-payments', 'auto', '.payments-pagination')
+	callModal('.modal-lesson', '#modal-lesson', '#modal-lesson')
+	callModal('.modal-consultation', '#modal-consultation', '#modal-consultation')
 } )
 
 const showMaps = () => {
@@ -48,8 +51,14 @@ const showBurgerMenu = () => {
 	if(!wrapper && ! button) return
 
 	button.addEventListener('click', () => {
-		if(!wrapper.classList.contains('opened')) wrapper.classList.add('opened')
-		else wrapper.classList.remove('opened')
+		setTargetElement( document.querySelector('#burger-menu') )
+
+		if(!wrapper.classList.contains('opened')) {
+			wrapper.classList.add('opened')
+			disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
+		} else {
+			wrapper.classList.remove('opened')
+		} 
 	})
 
 	const closeMenuAfterClick = (() => {
@@ -59,13 +68,20 @@ const showBurgerMenu = () => {
 	
 		links.forEach(link => {
 			link.addEventListener('click', () => {
-				wrapper.classList.remove('opened')
+				enableBodyScroll( getTargetElement() )
+				wrapper.classList.remove( 'opened' )
 			})
 		})
 	})()
 
 	close('.header-wrapper')
-	outerClose('.header-wrapper')
+
+	document.addEventListener('click', e => {
+        if (!wrapper.contains(e.target) && !button.contains(e.target)) {
+            wrapper.classList.remove('opened')
+            enableBodyScroll(getTargetElement())
+        }
+    })
 }
 
 const loadYTVideo = () => {
@@ -131,5 +147,42 @@ const initSwiperPag = (selector, view, pag) => {
 			}
 		}
 	  })
+}
+
+const callModal = ( btn, selector, lock) => {
+	const buttons = document.querySelectorAll(btn)
+	const modal = document.querySelector(selector)
+	const closeBtns = document.querySelectorAll('.close')
+
+	if( ! buttons.length && ! modal ) return;
+
+	buttons.forEach( button => {
+		button.addEventListener( 'click', () => {
+			setTargetElement( document.querySelector(lock) )
+			if( ! modal.classList.contains( 'opened' )) {
+				disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
+				modal.classList.add( 'opened' )
+			} 
+		} )
+	})
+
+	closeBtns.forEach( closeBtn => {
+		closeBtn.addEventListener('click', () => {
+			closeModal( modal )
+		})
+	})
+
+	modal.addEventListener( 'click', e => {
+		if( e.target === modal ){
+			closeModal( modal )
+		}
+	} )
+}
+
+const closeModal = ( modal ) => {
+	modal.classList.add( 'closed' )
+	setTimeout( () => modal.classList.remove( 'opened' ), 350 )
+	setTimeout( () => modal.classList.remove( 'closed' ), 350 )
+	enableBodyScroll( getTargetElement() )
 }
 

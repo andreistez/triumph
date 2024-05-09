@@ -81,7 +81,7 @@ $items        = $section['items'] ?? [];
 		if( $button_label ){
 			?>
 			<div class="button-wrapper">
-				<button class="button bg-red after">
+				<button class="button bg-red after modal-consultation">
 					<?php echo esc_html( $button_label ) ?>
 				</button>
 			</div>

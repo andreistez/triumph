@@ -91,6 +91,10 @@
 				max-width: 469px;
 			}
 		}
+
+		.feedback-wrapper {
+			align-items: center;
+		}
 	}
 }
 
@@ -142,6 +146,10 @@
 
 			.wpcf7-response-output {
 				color: $c-red
+			}
+
+			.wpcf7-textarea {
+				border-color: $c-red;
 			}
 		}
 
@@ -229,6 +237,7 @@
 
 		@media (min-width: $md) {
 			flex-direction: row;
+			margin-top: 32px;
 		}
 
 		input[type="checkbox"] {

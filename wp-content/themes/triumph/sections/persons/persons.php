@@ -11,7 +11,7 @@
 
 if( ! $section = $args['section'] ?? null ) return;
 
-wp_enqueue_style( 'fc-club', THEME_URI . '/static/css/sections/club/club.min.css', [], THEME_VERSION );
+wp_enqueue_style( 'fc-persons', THEME_URI . '/static/css/sections/persons/persons.min.css', [], THEME_VERSION );
 
 $title = $section['title'] ?? '';
 $title = $title ? str_replace( ['[color]', '[/color]'], ['<span>', '</span>'], $title ) : '';

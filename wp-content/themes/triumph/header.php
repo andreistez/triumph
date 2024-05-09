@@ -50,7 +50,7 @@ $phone_cleaned    = crit_clean_phone( $phone );
 	<?php wp_head() ?>
 </head>
 
-<body <?php body_class() ?>>
+<body <?php body_class() ?> id="body">
 <?php wp_body_open() ?>
 
 <div class="wrapper">
@@ -79,7 +79,7 @@ $phone_cleaned    = crit_clean_phone( $phone );
 				if( $working_time ) echo '<div class="header-worktime desktop"><p>', $working_time, '</p></div>';
 				?>
 
-				<button class="button sm desktop">
+				<button class="button sm desktop modal-consultation">
 					<?php _e( 'Получить консультацию', 'triumph' ) ?>
 				</button>
 
@@ -99,7 +99,7 @@ $phone_cleaned    = crit_clean_phone( $phone );
 					?>
 				</div>
 
-				<div class="burger-menu">
+				<div class="burger-menu" id="burger-menu">
 					<button class="close red"></button>
 
 					<?php

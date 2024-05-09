@@ -78,7 +78,7 @@ $button_label = $section['button_label'] ?? '';
 		if( $button_label ){
 			?>
 			<div class="button-wrapper">
-				<button class="button bg-red after"><?php echo esc_html( $button_label ) ?></button>
+				<button class="button bg-red after modal-lesson"><?php echo esc_html( $button_label ) ?></button>
 			</div>
 			<?php
 		}
