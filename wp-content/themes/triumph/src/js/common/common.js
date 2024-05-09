@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination} from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import { close } from "./global"
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import { setTargetElement, getTargetElement } from './global'
@@ -19,69 +19,71 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 	showMaps()
 	showBurgerMenu()
-	initSwiper('.swiper-gallery', 'auto', 16, '.swiper-pagination', '.swiper-next', '.swiper-prev')
-	initSwiper('.swiper-awards', 'auto', 28, '.awards-pagination', '.awards-next', '.awards-prev')
-	initSwiper('.swiper-persons', 'auto', 28, '.persons-pagination', '.persons-next', '.persons-prev')
-	initSwiperPag('.swiper-format', 'auto', '.format-pagination')
-	initSwiperPag('.swiper-payments', 'auto', '.payments-pagination')
-	callModal('.modal-lesson', '#modal-lesson', '#modal-lesson')
-	callModal('.modal-consultation', '#modal-consultation', '#modal-consultation')
+
+	initSwiper( '.swiper-gallery', 'auto', 16, '.swiper-pagination', '.swiper-next', '.swiper-prev' )
+	initSwiper( '.swiper-awards', 'auto', 28, '.awards-pagination', '.awards-next', '.awards-prev' )
+	initSwiper( '.swiper-persons', 'auto', 28, '.persons-pagination', '.persons-next', '.persons-prev' )
+	initSwiperPag( '.swiper-format', 'auto', '.format-pagination' )
+	initSwiperPag( '.swiper-payments', 'auto', '.payments-pagination' )
+
+	callModal( '.modal-lesson', '#modal-lesson', '#modal-lesson' )
+	callModal( '.modal-consultation', '#modal-consultation', '#modal-consultation' )
 } )
 
 const showMaps = () => {
-	const wrappers = document.querySelectorAll('.addresses')
+	const wrappers = document.querySelectorAll( '.addresses' )
 
-	wrappers.forEach(wrapper => {
-		const buttons = wrapper.querySelectorAll('.show-maps')
+	wrappers.forEach( wrapper => {
+		const buttons = wrapper.querySelectorAll( '.show-maps' )
 
-		if (!buttons.length) return
+		if( ! buttons.length ) return
 
-		buttons.forEach(button => {
-			button.addEventListener('click', () => {
-				wrapper.classList.toggle('clicked')
-			})
-		})
-	})
+		buttons.forEach( button => {
+			button.addEventListener( 'click', () => {
+				wrapper.classList.toggle( 'clicked' )
+			} )
+		} )
+	} )
 }
 
 const showBurgerMenu = () => {
-	const wrapper = document.querySelector('.header-wrapper')
-	const button  = document.querySelector('.burger-button')
+	const wrapper = document.querySelector( '.header-wrapper' )
+	const button = document.querySelector( '.burger-button' )
 
-	if(!wrapper && ! button) return
+	if( ! wrapper && ! button ) return
 
-	button.addEventListener('click', () => {
-		setTargetElement( document.querySelector('#burger-menu') )
+	button.addEventListener( 'click', () => {
+		setTargetElement( document.querySelector( '#burger-menu' ) )
 
-		if(!wrapper.classList.contains('opened')) {
-			wrapper.classList.add('opened')
-			disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
-		} else {
-			wrapper.classList.remove('opened')
-		} 
-	})
+		if( ! wrapper.classList.contains( 'opened' ) ){
+			wrapper.classList.add( 'opened' )
+			disableBodyScroll( getTargetElement(), { reserveScrollBarGap: true } )
+		}else{
+			wrapper.classList.remove( 'opened' )
+		}
+	} );
 
-	const closeMenuAfterClick = (() => {
-		const links = document.querySelectorAll('.menu a')
-	
-		if (!links.length) return
-	
-		links.forEach(link => {
-			link.addEventListener('click', () => {
+	( () => {
+		const links = document.querySelectorAll( '.menu a' )
+
+		if( ! links.length ) return
+
+		links.forEach( link => {
+			link.addEventListener( 'click', () => {
 				enableBodyScroll( getTargetElement() )
 				wrapper.classList.remove( 'opened' )
-			})
-		})
-	})()
+			} )
+		} )
+	} )();
 
-	close('.header-wrapper')
+	close( '.header-wrapper' )
 
-	document.addEventListener('click', e => {
-        if (!wrapper.contains(e.target) && !button.contains(e.target)) {
-            wrapper.classList.remove('opened')
-            enableBodyScroll(getTargetElement())
-        }
-    })
+	document.addEventListener( 'click', e => {
+		if( ! wrapper.contains( e.target ) && ! button.contains( e.target ) && wrapper.classList.contains( 'opened' ) ){
+			wrapper.classList.remove( 'opened' )
+			enableBodyScroll( getTargetElement() )
+		}
+	} )
 }
 
 const loadYTVideo = () => {
@@ -112,33 +114,33 @@ const loadYTVideo = () => {
 	} )
 }
 
-const initSwiper = (selector, view, gap, pag, next, prev) => {
-	const swiper = new Swiper(selector, {
+const initSwiper = ( selector, view, gap, pag, next, prev ) => {
+	const swiper = new Swiper( selector, {
 		slidesPerView: view,
 		spaceBetween: gap,
 
 		modules: [Pagination, Navigation],
 		pagination: {
 			clickable: 1,
-		  	el: pag,
+			el: pag
 		},
 
 		navigation: {
-		  nextEl: next,
-		  prevEl: prev,
+			nextEl: next,
+			prevEl: prev
 		}
-	  })
+	} )
 }
 
-const initSwiperPag = (selector, view, pag) => {
-	const swiper = new Swiper(selector, {
+const initSwiperPag = ( selector, view, pag ) => {
+	const swiper = new Swiper( selector, {
 		slidesPerView: view,
 		spaceBetween: 16,
 
 		modules: [Pagination],
 		pagination: {
 			clickable: 1,
-		  	el: pag,
+			el: pag
 		},
 
 		breakpoints: {
@@ -146,31 +148,30 @@ const initSwiperPag = (selector, view, pag) => {
 				spaceBetween: 28
 			}
 		}
-	  })
+	} )
 }
 
-const callModal = ( btn, selector, lock) => {
-	const buttons = document.querySelectorAll(btn)
-	const modal = document.querySelector(selector)
-	const closeBtns = document.querySelectorAll('.close')
+const callModal = ( btn, selector, lock ) => {
+	const buttons = document.querySelectorAll( btn )
+	const modal = document.querySelector( selector )
+	// const closeBtns = document.querySelectorAll( '.close' )
 
 	if( ! buttons.length && ! modal ) return;
 
 	buttons.forEach( button => {
 		button.addEventListener( 'click', () => {
-			setTargetElement( document.querySelector(lock) )
-			if( ! modal.classList.contains( 'opened' )) {
-				disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
+			if( ! modal.classList.contains( 'opened' ) ){
+				disableBodyScroll( modal, { reserveScrollBarGap: true } )
 				modal.classList.add( 'opened' )
-			} 
+			}
 		} )
-	})
+	} )
 
-	closeBtns.forEach( closeBtn => {
-		closeBtn.addEventListener('click', () => {
+	/*closeBtns.forEach( closeBtn => {
+		closeBtn.addEventListener( 'click', () => {
 			closeModal( modal )
-		})
-	})
+		} )
+	} )*/
 
 	modal.addEventListener( 'click', e => {
 		if( e.target === modal ){
@@ -181,7 +182,9 @@ const callModal = ( btn, selector, lock) => {
 
 const closeModal = ( modal ) => {
 	modal.classList.add( 'closed' )
-	setTimeout( () => modal.classList.remove( 'opened', 'closed' ), 350 )
-	enableBodyScroll( getTargetElement() )
+	setTimeout( () => {
+		modal.classList.remove( 'opened', 'closed' )
+		enableBodyScroll( modal )
+	}, 350 )
 }
 
