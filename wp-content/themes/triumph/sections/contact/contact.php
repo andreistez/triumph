@@ -12,6 +12,7 @@
 if( ! $section = $args['section'] ?? null ) return;
 
 wp_enqueue_style( 'fc-contact', THEME_URI . '/static/css/sections/contact/contact.min.css', [], THEME_VERSION );
+wp_enqueue_script( 'fc-contact', THEME_URI . '/static/js/contact/contact.min.js', ['jquery'], THEME_VERSION, true );
 
 // Yandex Maps API.
 if( $api_key = carbon_get_theme_option( 'yandex_maps_api_key' ) ?? '' )
