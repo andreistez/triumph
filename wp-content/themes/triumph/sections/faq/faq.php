@@ -36,7 +36,7 @@ $items = $section['items'] ?? [];
 				<div class="dropdown">
 					<button class="dropdown-button">
 						<div class="dropdown-button-ico">
-							<img src="<?php echo THEME_URI ?>/static/img/dropdown.svg" alt="">
+							<span></span>
 						</div>
 					</button>
 					<div class="dropdown-box">
