@@ -131,8 +131,8 @@ $gallery     = $section['gallery'] ?? [];
 							}
 							?>
 						</div>
-
-						<div class="swiper-gallery-controls">
+					</div><!-- .swiper.swiper-gallery -->
+					<div class="swiper-gallery-controls">
 							<div class="swiper-pagination"></div>
 							<div class="swiper-buttons">
 								<div class="swiper-prev sm">
@@ -157,7 +157,6 @@ $gallery     = $section['gallery'] ?? [];
 								</div>
 							</div>
 						</div>
-					</div><!-- .swiper.swiper-gallery -->
 				</div><!-- .gallery-photo -->
 				<?php
 			}
