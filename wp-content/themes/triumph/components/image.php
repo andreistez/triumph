@@ -29,7 +29,7 @@ else{
 	?>
 	<picture>
 		<source
-			media="(max-width:768px)"
+			media="(max-width:767px)"
 			srcset="<?php echo $data['mobile']['url'] . ' 1x, ' . $data['mobile']['url_2x'] . ' 2x' ?>"
 		>
 		<img

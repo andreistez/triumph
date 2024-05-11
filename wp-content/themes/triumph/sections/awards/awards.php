@@ -38,9 +38,7 @@ $photos = $section['photos'] ?? null;
 							<div class="swiper-slide">
 								<?php
 								get_template_part( 'components/image', null, [
-									'data' => crit_prepare_image_data( $image, 'award', [
-										'loading' => 'lazy'
-									] )
+									'data' => crit_prepare_image_data( $image, 'award', ['is_lazy' => 1] )
 								] );
 								?>
 

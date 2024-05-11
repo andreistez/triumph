@@ -48,7 +48,7 @@ $button_label = $section['button_label'] ?? '';
 								if( $image ){
 									echo '<div class="format-item-img">';
 									get_template_part( 'components/image', null, [
-										'data' => crit_prepare_image_data( $image, 'format' )
+										'data' => crit_prepare_image_data( $image, 'format', ['is_lazy' => 1] )
 									] );
 									echo '</div>';
 								}

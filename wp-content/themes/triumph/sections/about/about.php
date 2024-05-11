@@ -27,8 +27,9 @@ $items = $section['items'] ?? null;
 			echo '<div class="about-items">';
 
 			foreach( $items as $item ){
-				$image = $item['image'] ?? null;
-				$desc = $item['desc'] ?? '';
+				$image        = $item['image'] ?? null;
+				$image_mobile = $item['image_mobile'] ?? null;
+				$desc         = $item['desc'] ?? '';
 
 				if( ! $image && ! $desc ) continue;
 				?>
@@ -40,7 +41,11 @@ $items = $section['items'] ?? null;
 						if( $image ){
 							echo '<div class="about-item-img">';
 							get_template_part( 'components/image', null, [
-								'data' => crit_prepare_image_data( $image, 'about' )
+								'data' => crit_prepare_image_data( $image, 'about', [
+									'is_lazy'     => 1,
+									'mobile'      => $image_mobile,
+									'mobile_size' => 'about-mob'
+								] )
 							] );
 							echo '</div>';
 						}

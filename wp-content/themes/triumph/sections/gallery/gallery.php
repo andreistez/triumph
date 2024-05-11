@@ -44,7 +44,8 @@ $gallery     = $section['gallery'] ?? [];
 								<?php
 								if( $poster ) get_template_part( 'components/image', null, [
 									'data' => crit_prepare_image_data( $poster, 'poster', [
-										'class' => 'yt-lazy-poster'
+										'class'   => 'yt-lazy-poster',
+										'is_lazy' => 1
 									] )
 								] );
 								?>
@@ -78,7 +79,8 @@ $gallery     = $section['gallery'] ?? [];
 						<?php
 						if( $poster ) get_template_part( 'components/image', null, [
 							'data' => crit_prepare_image_data( $poster, 'poster', [
-								'class' => 'yt-lazy-poster'
+								'class'   => 'yt-lazy-poster',
+								'is_lazy' => 1
 							] )
 						] );
 						?>
@@ -118,7 +120,7 @@ $gallery     = $section['gallery'] ?? [];
 								if( $image ){
 									echo '<div class="gallery-photo">';
 									get_template_part( 'components/image', null, [
-										'data' => crit_prepare_image_data( $image, 'slide' )
+										'data' => crit_prepare_image_data( $image, 'slide', ['is_lazy' => 1] )
 									] );
 									echo '</div>';
 								}
