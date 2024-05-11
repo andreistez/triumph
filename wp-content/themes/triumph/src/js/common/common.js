@@ -19,21 +19,20 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	showMaps()
 	showBurgerMenu()
 
-	initSwiper( '.swiper-gallery', 'auto', 16, '.swiper-pagination', '.swiper-next', '.swiper-prev' )
-	initSwiper( '.swiper-awards', 'auto', 28, '.awards-pagination', '.awards-next', '.awards-prev' )
-	initSwiper( '.swiper-persons', 'auto', 28, '.persons-pagination', '.persons-next', '.persons-prev' )
-	initSwiperPag( '.swiper-format', 'auto', '.format-pagination' )
-	initSwiperPag( '.swiper-payments', 'auto', '.payments-pagination' )
+	initSwiper( '.swiper-gallery', 16, '.swiper-pagination', '.swiper-next', '.swiper-prev', 1 )
+	initSwiper( '.swiper-awards', 28, '.awards-pagination', '.awards-next', '.awards-prev', 2)
+	initSwiper( '.swiper-persons', 28, '.persons-pagination', '.persons-next', '.persons-prev', 4 )
+	initSwiperPag( '.swiper-format', '.format-pagination' )
+	initSwiperPag( '.swiper-payments', '.payments-pagination' )
 
-	callModal( '.modal-lesson', '#modal-lesson', '#modal-lesson' )
-	callModal( '.modal-consultation', '#modal-consultation', '#modal-consultation' )
+	callModal( '.modal-lesson', '#modal-lesson' )
+	callModal( '.modal-consultation', '#modal-consultation')
 
 	setIDforSections()
 } )
 
 const setIDforSections = () => {
 	const sections = document.querySelectorAll('section')
-	console.log(sections)
 	sections.forEach((section, index) => {
 		const sectionName = section.className
 		const id = sectionName + '-' + (index + 1)
@@ -45,7 +44,7 @@ const showMaps = () => {
 	const wrappers = document.querySelectorAll( '.addresses' )
 
 	wrappers.forEach( wrapper => {
-		const buttons = wrapper.querySelectorAll( '.show-maps' )
+		const buttons = wrapper.querySelectorAll( '.addresses-more' )
 
 		if( ! buttons.length ) return
 
@@ -131,9 +130,9 @@ const loadYTVideo = () => {
 	} )
 }
 
-const initSwiper = ( selector, view, gap, pag, next, prev ) => {
+const initSwiper = ( selector, gap, pag, next, prev, view ) => {
 	const swiper = new Swiper( selector, {
-		slidesPerView: view,
+		slidesPerView: 1,
 		spaceBetween: gap,
 
 		modules: [Pagination, Navigation],
@@ -145,13 +144,19 @@ const initSwiper = ( selector, view, gap, pag, next, prev ) => {
 		navigation: {
 			nextEl: next,
 			prevEl: prev
+		},
+
+		breakpoints: {
+			1200: {
+				slidesPerView: view
+			}
 		}
 	} )
 }
 
-const initSwiperPag = ( selector, view, pag ) => {
+const initSwiperPag = ( selector, pag ) => {
 	const swiper = new Swiper( selector, {
-		slidesPerView: view,
+		slidesPerView: 1,
 		spaceBetween: 16,
 
 		modules: [Pagination],
@@ -163,15 +168,19 @@ const initSwiperPag = ( selector, view, pag ) => {
 		breakpoints: {
 			992: {
 				spaceBetween: 28
+			},
+
+			1200: {
+				slidesPerView: 3
 			}
 		}
 	} )
 }
 
-const callModal = ( btn, selector, lock ) => {
+const callModal = ( btn, selector) => {
 	const buttons = document.querySelectorAll( btn )
 	const modal = document.querySelector( selector )
-	const closeBtn = modal.querySelector('.close')
+	const closeBtn = modal.querySelector('form .close')
 	const closeResp = modal.querySelector('.close-resp')
 
 	if( ! buttons.length && ! modal ) return;
@@ -192,6 +201,7 @@ const callModal = ( btn, selector, lock ) => {
 	} )
 
 	closeBtn.addEventListener('click', () => {
+		console.log('click')
 		modal.classList.add( 'closed' )
 		enableBodyScroll( modal )
 		setTimeout( () => {

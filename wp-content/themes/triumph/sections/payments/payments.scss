@@ -18,17 +18,17 @@
 
 	.swiper {
 		overflow: visible;
+		width: 300px;
+		margin: 0;
+		margin-right: auto;
 
-		@media (min-width: $xl) {
-			overflow: hidden;
+		@media (min-width: $md) {
+			width: 383px;
 		}
 
-		&-slide {
-			width: 300px;
-
-			@media (min-width: $md) {
-				width: 383px;
-			}
+		@media (min-width: $xl) {
+			width: 100%;
+			overflow: hidden;
 		}
 	}
 

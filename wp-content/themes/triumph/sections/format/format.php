@@ -69,8 +69,8 @@ $button_label = $section['button_label'] ?? '';
 						?>
 					</div><!-- .swiper-wrapper -->
 
-					<div class="format-pagination"></div>
 				</div><!-- .swiper -->
+				<div class="format-pagination"></div>
 			</div><!-- .format-wrapper -->
 			<?php
 		}

@@ -27,8 +27,16 @@
 
 		.swiper {
 			overflow: visible;
+			width: 100%;
+			margin: 0;
+			margin-right: auto;
 
 			@media (min-width: $md) {
+				width: 330px;
+			}
+
+			@media (min-width: $xl) {
+				width: 100%;
 				overflow: hidden;
 			}
 		}
@@ -39,10 +47,11 @@
 			img {
 				width: 100%;
 				border-radius: $border28;
+				height: 330px;
+				object-fit: cover;
 
 				@media (min-width: $md) {
 					height: 360px;
-					object-fit: cover;
 				}
 			}
 

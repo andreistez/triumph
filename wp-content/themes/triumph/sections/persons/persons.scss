@@ -37,18 +37,18 @@
 	}
 
 	.swiper-persons {
-		.swiper-slide {
-			width: 210px;
+		width: 210px;
+		margin: 0;
+		margin-right: auto;
 
-			@media (min-width: $lg) {	
-				width: 242px;
-			}
+		@media (min-width: $xl) {
+			width: 100%;
 		}
+	}
 
-		.persons-pagination {
-			justify-content: center;
-			margin-top: 40px;
-		}
+	.persons-pagination {
+		justify-content: center;
+		margin-top: 40px;
 	}
 
 	.persons-next, .persons-prev {

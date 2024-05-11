@@ -19,9 +19,9 @@ if( $address_main ) echo '<address><p>', $address_main, '</p></address>';
 if( ! empty( $additional_addresses ) ){
 	?>
 	<div class="addresses-more">
-		<button class="show-maps">
-			<span></span>
-		</button>
+		<div class="show-maps">
+			<img src="<?php echo THEME_URI ?>/static/img/address-btn.svg" alt="">
+		</div>
 		<p>
 			<?php
 			printf(

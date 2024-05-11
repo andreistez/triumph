@@ -137,7 +137,7 @@ $phone_cleaned    = crit_clean_phone( $phone );
 							?>
 						</div>
 
-						<button class="button sm mobile">
+						<button class="button sm mobile modal-consultation">
 							<?php _e( 'Получить консультацию', 'triumph' ) ?>
 						</button>
 					</div>

@@ -33,6 +33,27 @@
 		}
 	}
 
+	.show-maps {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		width: 12px;
+		height: 12px;
+		margin-right: 8px;
+		transition: opacity ease $tr;
+	
+		img {
+			width: 100%;
+			height: 100%;
+			transition: transform ease $tr;
+		}
+	
+		&:hover {
+			opacity: $op;
+		}
+	}
+
 	.addresses {
 		flex-direction: column;
 		align-items: flex-start;
@@ -49,6 +70,7 @@
 			padding: 0 9px;
 			border-radius: $border24;
 			position: relative;
+			cursor: pointer;
 
 			p {
 				color: $c-red;
@@ -127,10 +149,8 @@
 			}
 
 			.show-maps {
-				span {
-					&::after {
-						display: none
-					}
+				img {
+					transform: rotate(45deg)
 				}
 			}
 		}

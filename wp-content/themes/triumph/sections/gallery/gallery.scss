@@ -41,21 +41,24 @@
 	&-video {
 		margin-bottom: 20px;
 		width: 100%;
-		height: 320px;
-
-		@media (min-width: $md) {
-			height: 466px;
-		}
-
-		@media (min-width: $xl) {
-			width: 591px;
-			height: 400px;
-		}
 
 		&-desc {
 			margin-top: 20px;
 			padding-right: 20px;
 			@include textLg();
+		}
+
+		.yt-lazy, video {
+			height: 320px;
+
+			@media (min-width: $md) {
+				height: 466px;
+			}
+	
+			@media (min-width: $xl) {
+				width: 591px;
+				height: 400px;
+			}
 		}
 	}
 
@@ -69,7 +72,7 @@
 			margin: 20px 0;
 		}
 
-		@media (min-width: $lg) {
+		@media (min-width: $xl) {
 			max-width: 486px;
 		}
 
@@ -86,25 +89,25 @@
 
 	.swiper {
 		overflow: visible;
+		width: 320px;
+		margin: 0;
+		margin-right: auto;
+
+		@media (min-width: $md) {
+			width: 688px;
+		}
 
 		@media (min-width: $xl) {
 			overflow: hidden;
+			width: 486px;
 		}
 	}
 
 	.swiper-slide {
-		width: 300px;
-
 		@media (min-width: $md) {
-			width: 640px;
-
 			img {
 				width: 100%;
 			}
-		}
-
-		@media (min-width: $lg) {
-			width: 100%;
 		}
 	}
 

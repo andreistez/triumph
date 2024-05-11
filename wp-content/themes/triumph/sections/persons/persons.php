@@ -54,9 +54,8 @@ $team  = $section['team'] ?? [];
 						}
 						?>
 					</div><!-- .swiper-wrapper -->
-
-					<div class="persons-pagination"></div>
 				</div><!-- .swiper -->
+				<div class="persons-pagination"></div>
 
 				<div class="swiper-buttons">
 					<div class="persons-prev">

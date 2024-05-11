@@ -71,9 +71,8 @@ $items        = $section['items'] ?? [];
 						}
 						?>
 					</div><!-- .swiper-wrapper -->
-
-					<div class="payments-pagination"></div>
 				</div><!-- .swiper -->
+				<div class="payments-pagination"></div>
 			</div><!-- .payments-items -->
 			<?php
 		}
