@@ -1,6 +1,5 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
-import { close } from "./global"
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import { setTargetElement, getTargetElement } from './global'
 
@@ -61,6 +60,7 @@ const showMaps = () => {
 const showBurgerMenu = () => {
 	const wrapper = document.querySelector( '.header-wrapper' )
 	const button = document.querySelector( '.burger-button' )
+	const closeBtn = wrapper.querySelector('.close')
 
 	if( ! wrapper && ! button ) return
 
@@ -88,7 +88,12 @@ const showBurgerMenu = () => {
 		} )
 	} )();
 
-	close( '.header-wrapper' )
+		closeBtn.addEventListener('click', () => {
+			if(wrapper.classList.contains('opened')) {
+				wrapper.classList.remove('opened')
+				enableBodyScroll( getTargetElement() )
+			} 
+		})
 
 	document.addEventListener( 'click', e => {
 		if( ! wrapper.contains( e.target ) && ! button.contains( e.target ) && wrapper.classList.contains( 'opened' ) ){
