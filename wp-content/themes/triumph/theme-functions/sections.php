@@ -30,15 +30,15 @@ Container::make( 'post_meta', __( 'Секции' ) )
 			// About section.
 			->add_fields( 'about', __( 'О нас' ), [
 				Field::make( 'text', 'title', __( 'Заголовок' ) )
-					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) )
-					->set_width( 50 ),
+					->set_help_text( __( 'Используйте [color] и [/color] для изменения цвета текста между ними.' ) ),
 				Field::make( 'complex', 'items', __( 'Элементы' ) )
-					->set_width( 50 )
 					->add_fields( [
 						Field::make( 'image', 'image', __( 'Изображение' ) )
-							->set_width( 50 ),
+							->set_width( 34 ),
+						Field::make( 'image', 'image_mobile', __( 'Изображение для мобильных' ) )
+							->set_width( 33 ),
 						Field::make( 'text', 'desc', __( 'Описание' ) )
-							->set_width( 50 )
+							->set_width( 33 )
 					] )
 			] )
 

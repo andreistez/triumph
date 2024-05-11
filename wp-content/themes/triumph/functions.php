@@ -68,6 +68,9 @@ function critick_init_theme(): void
 	add_image_size( 'about', 266, 320 );
 	add_image_size( 'about@2x', 532, 640 );
 
+	add_image_size( 'about-mob', 320, 242 );
+	add_image_size( 'about-mob@2x', 640, 484 );
+
 	add_image_size( 'format', 383, 268 );
 	add_image_size( 'format@2x', 766, 536 );
 

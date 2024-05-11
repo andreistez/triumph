@@ -39,7 +39,7 @@ $team  = $section['team'] ?? [];
 								<div class="person-img">
 									<?php
 									get_template_part( 'components/image', null, [
-										'data' => crit_prepare_image_data( $image, 'team' )
+										'data' => crit_prepare_image_data( $image, 'team', ['is_lazy' => 1] )
 									] );
 									?>
 								</div>

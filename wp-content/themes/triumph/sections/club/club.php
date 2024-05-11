@@ -46,7 +46,8 @@ $poster     = $section['poster'] ?? null;
 								<?php
 								if( $poster ) get_template_part( 'components/image', null, [
 									'data' => crit_prepare_image_data( $poster, 'poster', [
-										'class' => 'yt-lazy-poster'
+										'class'   => 'yt-lazy-poster',
+										'is_lazy' => 1
 									] )
 								] );
 								?>
