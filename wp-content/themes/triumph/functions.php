@@ -9,10 +9,10 @@
 
 use Carbon_Fields\Carbon_Fields;
 
-const THEME_NAME = 'triumph';
+const THEME_NAME    = 'triumph';
+const THEME_VERSION = '1.0.0';
 define( 'THEME_URI', get_template_directory_uri() );
 define( 'THEME_DIR', get_template_directory() );
-define( 'THEME_VERSION', mt_rand() );   // Change to static value when go live.
 
 add_action( 'after_setup_theme', 'critick_load_theme_dependencies' );
 /**
